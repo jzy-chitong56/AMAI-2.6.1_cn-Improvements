@@ -1122,10 +1122,8 @@ elseif c == PLAYER_COLOR_LIGHT_BLUE then
     return "|c0033ccff"+ai_name+"|r: "
 elseif c == PLAYER_COLOR_AQUA then
     return "|c007fffd4"+ai_name+"|r: "
-elseif c == PLAYER_COLOR_BROWN then
-    return "|c00660000"+ai_name+"|r: "  //Brown
-// else
-    // if PLAYERPASSIVE == 27 then
+else
+    // if PLAYERPASSIVE != 15 then
       // if c == PLAYER_COLOR_MAROON then
         // return "|c00800000"+ai_name+"|r: "
       // elseif c == PLAYER_COLOR_NAVY then
@@ -1152,6 +1150,7 @@ elseif c == PLAYER_COLOR_BROWN then
         // return "|c00824432"+ai_name+"|r: "
 	  // endif
     // endif
+    return "|c00660000"+ai_name+"|r: "//Brown
 endif
 endfunction
 
@@ -1211,7 +1210,7 @@ function CreateDebugTag takes string s, real fontsize, unit u, real lifespan, re
     elseif c == PLAYER_COLOR_BROWN then
         call SetTextTagColor(tt, AMAIPercentTo255(40), AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(100-0))  //Brown
 	// else 
-	  // if PLAYERPASSIVE == 27 then
+	  // if PLAYERPASSIVE != 15 then
 		// if c == PLAYER_COLOR_MAROON then
 		  // call SetTextTagColor(tt, 128, AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(100-0))
 	    // elseif c == PLAYER_COLOR_NAVY then
@@ -1278,7 +1277,7 @@ function ColorText takes player CPlayer returns string
   elseif (PColor == PLAYER_COLOR_BROWN) then
     return "Brown"
   // else
-	// if PLAYERPASSIVE == 27 then
+	// if PLAYERPASSIVE != 15 then
       // if (PColor == PLAYER_COLOR_MAROON) then
         // return "Maroon"
       // elseif (PColor == PLAYER_COLOR_NAVY) then
@@ -1468,6 +1467,7 @@ function DisplayToAll takes string s returns nothing
     local integer i = 0
     loop
         call DisplayTimedTextToPlayer(Player(i),0,0,15,message_add+s)
+        call DisplayTimedTextToPlayer(Player(i),0,0,15,I2S(PLAYERPASSIVE))
         set i = i + 1
         exitwhen i == PLAYERAGGRESSIVE
     endloop
@@ -11935,6 +11935,23 @@ endfunction
 
 //============================================================================
 function InitAI takes nothing returns nothing
+    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
+	  set PLAYERPASSIVE = 27
+	  set PLAYERAGGRESSIVE = 24
+	  // set PLAYER_COLOR_MAROON             = ConvertPlayerColor(12)
+      // set PLAYER_COLOR_NAVY               = ConvertPlayerColor(13)
+      // set PLAYER_COLOR_TURQUOISE          = ConvertPlayerColor(14)
+      // set PLAYER_COLOR_VIOLET             = ConvertPlayerColor(15)
+      // set PLAYER_COLOR_WHEAT              = ConvertPlayerColor(16)
+      // set PLAYER_COLOR_PEACH              = ConvertPlayerColor(17)
+      // set PLAYER_COLOR_MINT               = ConvertPlayerColor(18)
+      // set PLAYER_COLOR_LAVENDER           = ConvertPlayerColor(19)
+      // set PLAYER_COLOR_COAL               = ConvertPlayerColor(20)
+      // set PLAYER_COLOR_SNOW               = ConvertPlayerColor(21)
+      // set PLAYER_COLOR_EMERALD            = ConvertPlayerColor(22)
+      // set PLAYER_COLOR_PEANUT             = ConvertPlayerColor(23)
+    endif
+
     set ai_player = Player(GetAiPlayer())
     set sleep_seconds = 0
 	call InitAiUnits()
@@ -11948,23 +11965,6 @@ function StandardAI takes code heroes, code peons, code attacks returns nothing
     local boolean isNewbie = (MeleeDifficulty() == MELEE_NEWBIE)
 
     call InitAI()
-    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
-	  set PLAYERPASSIVE = 27
-	  set PLAYERAGGRESSIVE = 24
-	// set PLAYER_COLOR_MAROON             = PLAYER_COLOR_MAROON
-    // set PLAYER_COLOR_NAVY               = PLAYER_COLOR_NAVY
-    // set PLAYER_COLOR_TURQUOISE          = PLAYER_COLOR_TURQUOISE
-    // set PLAYER_COLOR_VIOLET             = PLAYER_COLOR_VIOLET
-    // set PLAYER_COLOR_WHEAT              = PLAYER_COLOR_WHEAT
-    // set PLAYER_COLOR_PEACH              = PLAYER_COLOR_PEACH
-    // set PLAYER_COLOR_MINT               = PLAYER_COLOR_MINT
-    // set PLAYER_COLOR_LAVENDER           = PLAYER_COLOR_LAVENDER
-    // set PLAYER_COLOR_COAL               = PLAYER_COLOR_COAL
-    // set PLAYER_COLOR_SNOW               = PLAYER_COLOR_SNOW
-    // set PLAYER_COLOR_EMERALD            = PLAYER_COLOR_EMERALD
-    // set PLAYER_COLOR_PEANUT             = PLAYER_COLOR_PEANUT
-    endif
-
     call SetMeleeAI()
 
     call SetDefendPlayer(true)

@@ -240,7 +240,6 @@ endfunction
 // ColorPlayer (Converts from text version of a color to a playercolor)
 //===========================================================================
 function ColorPlayer takes string CompC returns playercolor
-  local integer i = 0
   //Finds player color of the text color
   if (CompC == "Red") then
     return PLAYER_COLOR_RED
@@ -266,38 +265,34 @@ function ColorPlayer takes string CompC returns playercolor
     return PLAYER_COLOR_AQUA
   elseif (CompC == "Brown") then
     return PLAYER_COLOR_BROWN
-  else
+   else
     // if  playermax != 12 then
-	  // loop
-		  // if (GetPlayerColor(Player(i)) == PLAYER_COLOR_MAROON) then
-			// return PLAYER_COLOR_MAROON
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_NAVY) then
-			// return PLAYER_COLOR_NAVY
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_TURQUOISE) then
-			// return PLAYER_COLOR_TURQUOISE
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_VIOLET) then
-			// return PLAYER_COLOR_VIOLET
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_WHEAT) then
-			// return PLAYER_COLOR_WHEAT
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_PEACH) then
-			// return PLAYER_COLOR_PEACH
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_MINT) then
-			// return PLAYER_COLOR_MINT
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_LAVENDER) then
-			// return PLAYER_COLOR_LAVENDER
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_COAL) then
-			// return PLAYER_COLOR_COAL
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_SNOW) then
-			// return PLAYER_COLOR_SNOW
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_EMERALD) then
-			// return PLAYER_COLOR_EMERALD
-		  // elseif (GetPlayerColor(Player(i)) == PLAYER_COLOR_PEANUT) then
-			// return PLAYER_COLOR_PEANUT
-		  // endif
-	   // set i = i +1
-	   // exitwhen i >23
-	   // endloop
-      // endif
+	  // if (CompC == "MAROON") then
+        // return PLAYER_COLOR_MAROON
+      // elseif (CompC == "Navy") then
+        // return PLAYER_COLOR_NAVY
+      // elseif (CompC == "Turquoise") then
+        // return PLAYER_COLOR_TURQUOISE
+      // elseif (CompC == "Violet") then
+        // return PLAYER_COLOR_VIOLET
+      // elseif (CompC == "Wheat") then
+        // return PLAYER_COLOR_WHEAT
+      // elseif (CompC == "Peach") then
+        // return PLAYER_COLOR_PEACH
+      // elseif (CompC == "Mint") then
+        // return PLAYER_COLOR_MINT
+      // elseif (CompC == "Lavender") then
+        // return PLAYER_COLOR_LAVENDER
+      // elseif (CompC == "Coal") then
+        // return PLAYER_COLOR_COAL
+      // elseif (CompC == "Snow") then
+        // return PLAYER_COLOR_SNOW
+      // elseif (CompC == "Emerald") then
+        // return PLAYER_COLOR_EMERALD
+      // elseif (CompC == "Peanut") then
+        // return PLAYER_COLOR_PEANUT
+	  // endif
+    //endif
     return null
   endif
 
