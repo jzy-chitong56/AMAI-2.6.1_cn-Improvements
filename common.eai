@@ -1467,7 +1467,6 @@ function DisplayToAll takes string s returns nothing
     local integer i = 0
     loop
         call DisplayTimedTextToPlayer(Player(i),0,0,15,message_add+s)
-        call DisplayTimedTextToPlayer(Player(i),0,0,15,I2S(PLAYERPASSIVE))
         set i = i + 1
         exitwhen i == PLAYERAGGRESSIVE
     endloop
