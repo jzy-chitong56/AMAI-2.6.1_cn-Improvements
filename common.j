@@ -181,20 +181,6 @@ globals
     constant playercolor        PLAYER_COLOR_AQUA               = ConvertPlayerColor(10)
     constant playercolor        PLAYER_COLOR_BROWN              = ConvertPlayerColor(11)
 
-	playercolor        PLAYER_COLOR_MAROON             = null
-    playercolor        PLAYER_COLOR_NAVY               = null
-    playercolor        PLAYER_COLOR_TURQUOISE          = null
-    playercolor        PLAYER_COLOR_VIOLET             = null
-    playercolor        PLAYER_COLOR_WHEAT              = null
-    playercolor        PLAYER_COLOR_PEACH              = null
-    playercolor        PLAYER_COLOR_MINT               = null
-    playercolor        PLAYER_COLOR_LAVENDER           = null
-    playercolor        PLAYER_COLOR_COAL               = null
-    playercolor        PLAYER_COLOR_SNOW               = null
-    playercolor        PLAYER_COLOR_EMERALD            = null
-    playercolor        PLAYER_COLOR_PEANUT             = null
-
-
     constant race               RACE_HUMAN                      = ConvertRace(1)
     constant race               RACE_ORC                        = ConvertRace(2)
     constant race               RACE_UNDEAD                     = ConvertRace(3)

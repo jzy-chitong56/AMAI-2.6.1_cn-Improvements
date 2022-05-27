@@ -128,7 +128,19 @@
     string dlgbutton_ai_only = ""
 
     leaderboard color_board = null
-    
+	playercolor        PLAYER_COLOR_MAROONX             = null
+    playercolor        PLAYER_COLOR_NAVYX               = null
+    playercolor        PLAYER_COLOR_TURQUOISEX          = null
+    playercolor        PLAYER_COLOR_VIOLETX             = null
+    playercolor        PLAYER_COLOR_WHEATX              = null
+    playercolor        PLAYER_COLOR_PEACHX              = null
+    playercolor        PLAYER_COLOR_MINTX               = null
+    playercolor        PLAYER_COLOR_LAVENDERX           = null
+    playercolor        PLAYER_COLOR_COALX               = null
+    playercolor        PLAYER_COLOR_SNOWX               = null
+    playercolor        PLAYER_COLOR_EMERALDX            = null
+    playercolor        PLAYER_COLOR_PEANUTX             = null
+	
     //gamecache translation = InitGameCache("Commander.w3v")
 	hashtable translation = InitHashtable()
 
@@ -203,34 +215,34 @@ function ColorText takes player CPlayer returns string
     return "Aqua"
   elseif (PColor == PLAYER_COLOR_BROWN) then
     return "Brown"
-  // else
-    // if playermax != 12 then
-      // if (PColor == PLAYER_COLOR_MAROON) then
-        // return "Maroon"
-      // elseif (PColor == PLAYER_COLOR_NAVY) then
-        // return "Navy"
-      // elseif (PColor == PLAYER_COLOR_TURQUOISE) then
-        // return "Turquoise"
-      // elseif (PColor == PLAYER_COLOR_VIOLET) then
-        // return "Violet"
-      // elseif (PColor == PLAYER_COLOR_WHEAT) then
-        // return "Wheat"
-      // elseif (PColor == PLAYER_COLOR_PEACH) then
-        // return "Peach"
-      // elseif (PColor == PLAYER_COLOR_MINT) then
-        // return "Mint"
-      // elseif (PColor == PLAYER_COLOR_LAVENDER) then
-        // return "Lavender"
-      // elseif (PColor == PLAYER_COLOR_COAL) then
-        // return "Coal"
-      // elseif (PColor == PLAYER_COLOR_SNOW) then
-        // return "Snow"
-      // elseif (PColor == PLAYER_COLOR_EMERALD) then
-        // return "Emerald"
-      // elseif (PColor == PLAYER_COLOR_PEANUT) then
-        // return "Peanut"
-      // endif
-     // endif
+  else
+    if playermax != 12 then
+      if (PColor == PLAYER_COLOR_MAROONX) then
+        return "Maroon"
+      elseif (PColor == PLAYER_COLOR_NAVYX) then
+        return "Navy"
+      elseif (PColor == PLAYER_COLOR_TURQUOISEX) then
+        return "Turquoise"
+      elseif (PColor == PLAYER_COLOR_VIOLETX) then
+        return "Violet"
+      elseif (PColor == PLAYER_COLOR_WHEATX) then
+        return "Wheat"
+      elseif (PColor == PLAYER_COLOR_PEACHX) then
+        return "Peach"
+      elseif (PColor == PLAYER_COLOR_MINTX) then
+        return "Mint"
+      elseif (PColor == PLAYER_COLOR_LAVENDERX) then
+        return "Lavender"
+      elseif (PColor == PLAYER_COLOR_COALX) then
+        return "Coal"
+      elseif (PColor == PLAYER_COLOR_SNOWX) then
+        return "Snow"
+      elseif (PColor == PLAYER_COLOR_EMERALDX) then
+        return "Emerald"
+      elseif (PColor == PLAYER_COLOR_PEANUTX) then
+        return "Peanut"
+      endif
+     endif
   endif
   //Returns text version
   return ""
@@ -266,33 +278,33 @@ function ColorPlayer takes string CompC returns playercolor
   elseif (CompC == "Brown") then
     return PLAYER_COLOR_BROWN
    else
-    // if  playermax != 12 then
-	  // if (CompC == "MAROON") then
-        // return PLAYER_COLOR_MAROON
-      // elseif (CompC == "Navy") then
-        // return PLAYER_COLOR_NAVY
-      // elseif (CompC == "Turquoise") then
-        // return PLAYER_COLOR_TURQUOISE
-      // elseif (CompC == "Violet") then
-        // return PLAYER_COLOR_VIOLET
-      // elseif (CompC == "Wheat") then
-        // return PLAYER_COLOR_WHEAT
-      // elseif (CompC == "Peach") then
-        // return PLAYER_COLOR_PEACH
-      // elseif (CompC == "Mint") then
-        // return PLAYER_COLOR_MINT
-      // elseif (CompC == "Lavender") then
-        // return PLAYER_COLOR_LAVENDER
-      // elseif (CompC == "Coal") then
-        // return PLAYER_COLOR_COAL
-      // elseif (CompC == "Snow") then
-        // return PLAYER_COLOR_SNOW
-      // elseif (CompC == "Emerald") then
-        // return PLAYER_COLOR_EMERALD
-      // elseif (CompC == "Peanut") then
-        // return PLAYER_COLOR_PEANUT
-	  // endif
-    //endif
+    if  playermax != 12 then
+	  if (CompC == "MAROON") then
+        return PLAYER_COLOR_MAROONX
+      elseif (CompC == "Navy") then
+        return PLAYER_COLOR_NAVYX
+      elseif (CompC == "Turquoise") then
+        return PLAYER_COLOR_TURQUOISEX
+      elseif (CompC == "Violet") then
+        return PLAYER_COLOR_VIOLETX
+      elseif (CompC == "Wheat") then
+        return PLAYER_COLOR_WHEATX
+      elseif (CompC == "Peach") then
+        return PLAYER_COLOR_PEACHX
+      elseif (CompC == "Mint") then
+        return PLAYER_COLOR_MINTX
+      elseif (CompC == "Lavender") then
+        return PLAYER_COLOR_LAVENDERX
+      elseif (CompC == "Coal") then
+        return PLAYER_COLOR_COALX
+      elseif (CompC == "Snow") then
+        return PLAYER_COLOR_SNOWX
+      elseif (CompC == "Emerald") then
+        return PLAYER_COLOR_EMERALDX
+      elseif (CompC == "Peanut") then
+        return PLAYER_COLOR_PEANUTX
+	  endif
+    endif
     return null
   endif
 
@@ -322,33 +334,33 @@ function cs2s takes string s, playercolor c returns string
   elseif c == PLAYER_COLOR_AQUA then
     return "|c007fffd4"+s+"|r"
   else
-    // if  playermax != 12 then
-      // if c == PLAYER_COLOR_MAROON then
-        // return "|c00800000"+s+"|r"
-      // elseif c == PLAYER_COLOR_NAVY then
-        // return "|c00000080"+s+"|r"
-      // elseif c == PLAYER_COLOR_TURQUOISE then
-        // return "|c0040e0d0"+s+"|r"
-      // elseif c == PLAYER_COLOR_VIOLET then
-        // return "|c00ee82ee"+s+"|r"
-      // elseif c == PLAYER_COLOR_WHEAT then
-        // return "|c00f5deb3"+s+"|r"
-      // elseif c == PLAYER_COLOR_PEACH then
-        // return "|c00ffe5b4"+s+"|r"
-      // elseif c == PLAYER_COLOR_MINT then
-        // return "|c0098ff98"+s+"|r"
-      // elseif c == PLAYER_COLOR_LAVENDER then
-        // return "|c00e6e6fa"+s+"|r"
-      // elseif c == PLAYER_COLOR_COAL then
-        // return "|c00060607"+s+"|r"
-      // elseif c == PLAYER_COLOR_SNOW then
-        // return "|c00fffafa"+s+"|r"
-      // elseif c == PLAYER_COLOR_EMERALD then
-        // return "|c0050c878"+s+"|r"
-      // elseif c == PLAYER_COLOR_PEANUT then
-        // return "|c00824432"+s+"|r"
-      // endif
-    // endif
+    if  playermax != 12 then
+      if c == PLAYER_COLOR_MAROONX then
+        return "|c00800000"+s+"|r"
+      elseif c == PLAYER_COLOR_NAVYX then
+        return "|c00000080"+s+"|r"
+      elseif c == PLAYER_COLOR_TURQUOISEX then
+        return "|c0040e0d0"+s+"|r"
+      elseif c == PLAYER_COLOR_VIOLETX then
+        return "|c00ee82ee"+s+"|r"
+      elseif c == PLAYER_COLOR_WHEATX then
+        return "|c00f5deb3"+s+"|r"
+      elseif c == PLAYER_COLOR_PEACHX then
+        return "|c00ffe5b4"+s+"|r"
+      elseif c == PLAYER_COLOR_MINTX then
+        return "|c0098ff98"+s+"|r"
+      elseif c == PLAYER_COLOR_LAVENDERX then
+        return "|c00e6e6fa"+s+"|r"
+      elseif c == PLAYER_COLOR_COALX then
+        return "|c00060607"+s+"|r"
+      elseif c == PLAYER_COLOR_SNOWX then
+        return "|c00fffafa"+s+"|r"
+      elseif c == PLAYER_COLOR_EMERALDX then
+        return "|c0050c878"+s+"|r"
+      elseif c == PLAYER_COLOR_PEANUTX then
+        return "|c00824432"+s+"|r"
+      endif
+    endif
     return "|c00660000"+s+"|r"  //Brown
   endif
 endfunction

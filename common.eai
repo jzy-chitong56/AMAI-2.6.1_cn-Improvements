@@ -58,6 +58,19 @@ globals
     integer PLAYERPASSIVE = 15
     integer PLAYERAGGRESSIVE = 12
 
+	playercolor        PLAYER_COLOR_MAROONX             = null
+    playercolor        PLAYER_COLOR_NAVYX               = null
+    playercolor        PLAYER_COLOR_TURQUOISEX          = null
+    playercolor        PLAYER_COLOR_VIOLETX             = null
+    playercolor        PLAYER_COLOR_WHEATX              = null
+    playercolor        PLAYER_COLOR_PEACHX              = null
+    playercolor        PLAYER_COLOR_MINTX               = null
+    playercolor        PLAYER_COLOR_LAVENDERX           = null
+    playercolor        PLAYER_COLOR_COALX               = null
+    playercolor        PLAYER_COLOR_SNOWX               = null
+    playercolor        PLAYER_COLOR_EMERALDX            = null
+    playercolor        PLAYER_COLOR_PEANUTX             = null
+
     integer sleep_seconds
     integer total_gold              = 0
     integer total_wood              = 0
@@ -1123,33 +1136,33 @@ elseif c == PLAYER_COLOR_LIGHT_BLUE then
 elseif c == PLAYER_COLOR_AQUA then
     return "|c007fffd4"+ai_name+"|r: "
 else
-    // if PLAYERPASSIVE != 15 then
-      // if c == PLAYER_COLOR_MAROON then
-        // return "|c00800000"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_NAVY then
-        // return "|c00000080"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_TURQUOISE then
-        // return "|c0040e0d0"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_VIOLET then
-        // return "|c00ee82ee"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_WHEAT then
-        // return "|c00f5deb3"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_PEACH then
-        // return "|c00ffe5b4"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_MINT then
-        // return "|c0098ff98"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_LAVENDER then
-        // return "|c00e6e6fa"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_COAL then
-        // return "|c00060607"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_SNOW then
-        // return "|c00fffafa"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_EMERALD then
-        // return "|c0050c878"+ai_name+"|r: "
-      // elseif c == PLAYER_COLOR_PEANUT then
-        // return "|c00824432"+ai_name+"|r: "
-	  // endif
-    // endif
+    if PLAYERPASSIVE != 15 then
+      if c == PLAYER_COLOR_MAROONX then
+        return "|c00800000"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_NAVYX then
+        return "|c00000080"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_TURQUOISEX then
+        return "|c0040e0d0"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_VIOLETX then
+        return "|c00ee82ee"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_WHEATX then
+        return "|c00f5deb3"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_PEACHX then
+        return "|c00ffe5b4"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_MINTX then
+        return "|c0098ff98"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_LAVENDERX then
+        return "|c00e6e6fa"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_COALX then
+        return "|c00060607"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_SNOWX then
+        return "|c00fffafa"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_EMERALDX then
+        return "|c0050c878"+ai_name+"|r: "
+      elseif c == PLAYER_COLOR_PEANUTX then
+        return "|c00824432"+ai_name+"|r: "
+	  endif
+    endif
     return "|c00660000"+ai_name+"|r: "//Brown
 endif
 endfunction
@@ -1209,34 +1222,34 @@ function CreateDebugTag takes string s, real fontsize, unit u, real lifespan, re
 		call SetTextTagColor(tt, AMAIPercentTo255(50), AMAIPercentTo255(100), AMAIPercentTo255(83), AMAIPercentTo255(100-0))	
     elseif c == PLAYER_COLOR_BROWN then
         call SetTextTagColor(tt, AMAIPercentTo255(40), AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(100-0))  //Brown
-	// else 
-	  // if PLAYERPASSIVE != 15 then
-		// if c == PLAYER_COLOR_MAROON then
-		  // call SetTextTagColor(tt, 128, AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_NAVY then
-		  // call SetTextTagColor(tt, AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(50), AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_TURQUOISE then
-		  // call SetTextTagColor(tt, 64, 224,208, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_VIOLET then
-		  // call SetTextTagColor(tt, 238, 130, 238, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_WHEAT then
-		  // call SetTextTagColor(tt, 245, 222, 179, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_PEACH then
-		  // call SetTextTagColor(tt, 255, 229, 180, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_MINT then
-		  // call SetTextTagColor(tt, 170, 240, 209, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_LAVENDER then
-		  // call SetTextTagColor(tt, 230, 230, 250, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_COAL then
-		  // call SetTextTagColor(tt, 51, 51, 13, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_SNOW then
-		  // call SetTextTagColor(tt, 255, 250, 250, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_EMERALD then
-		  // call SetTextTagColor(tt, 80, 200, 120, AMAIPercentTo255(100-0))
-	    // elseif c == PLAYER_COLOR_PEANUT then
-		  // call SetTextTagColor(tt, 122, 68, 52, AMAIPercentTo255(100-0))
-		// endif
-	  // endif
+	else 
+	  if PLAYERPASSIVE != 15 then
+		if c == PLAYER_COLOR_MAROONX then
+		  call SetTextTagColor(tt, 128, AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_NAVYX then
+		  call SetTextTagColor(tt, AMAIPercentTo255(0), AMAIPercentTo255(0), AMAIPercentTo255(50), AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_TURQUOISEX then
+		  call SetTextTagColor(tt, 64, 224,208, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_VIOLETX then
+		  call SetTextTagColor(tt, 238, 130, 238, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_WHEATX then
+		  call SetTextTagColor(tt, 245, 222, 179, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_PEACHX then
+		  call SetTextTagColor(tt, 255, 229, 180, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_MINTX then
+		  call SetTextTagColor(tt, 170, 240, 209, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_LAVENDERX then
+		  call SetTextTagColor(tt, 230, 230, 250, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_COALX then
+		  call SetTextTagColor(tt, 51, 51, 13, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_SNOWX then
+		  call SetTextTagColor(tt, 255, 250, 250, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_EMERALDX then
+		  call SetTextTagColor(tt, 80, 200, 120, AMAIPercentTo255(100-0))
+	    elseif c == PLAYER_COLOR_PEANUTX then
+		  call SetTextTagColor(tt, 122, 68, 52, AMAIPercentTo255(100-0))
+		endif
+	  endif
 	endif
     call SetTextTagPermanent(tt, false)
 	call SetTextTagLifespan(tt, lifespan)
@@ -1276,34 +1289,34 @@ function ColorText takes player CPlayer returns string
     return "Aqua"
   elseif (PColor == PLAYER_COLOR_BROWN) then
     return "Brown"
-  // else
-	// if PLAYERPASSIVE != 15 then
-      // if (PColor == PLAYER_COLOR_MAROON) then
-        // return "Maroon"
-      // elseif (PColor == PLAYER_COLOR_NAVY) then
-        // return "Navy"
-      // elseif (PColor == PLAYER_COLOR_TURQUOISE) then
-        // return "Turquoise"
-      // elseif (PColor == PLAYER_COLOR_VIOLET) then
-        // return "Violet"
-      // elseif (PColor == PLAYER_COLOR_WHEAT) then
-        // return "Wheat"
-      // elseif (PColor == PLAYER_COLOR_PEACH) then
-        // return "Peach"
-      // elseif (PColor == PLAYER_COLOR_MINT) then
-        // return "Mint"
-      // elseif (PColor == PLAYER_COLOR_LAVENDER) then
-        // return "Lavender"
-      // elseif (PColor == PLAYER_COLOR_COAL) then
-        // return "Coal"
-      // elseif (PColor == PLAYER_COLOR_SNOW) then
-        // return "Snow"
-      // elseif (PColor == PLAYER_COLOR_EMERALD) then
-        // return "Emerald"
-      // elseif (PColor == PLAYER_COLOR_PEANUT) then
-        // return "Peanut"
-      // endif
-     // endif
+  else
+	if PLAYERPASSIVE != 15 then
+      if (PColor == PLAYER_COLOR_MAROONX) then
+        return "Maroon"
+      elseif (PColor == PLAYER_COLOR_NAVYX) then
+        return "Navy"
+      elseif (PColor == PLAYER_COLOR_TURQUOISEX) then
+        return "Turquoise"
+      elseif (PColor == PLAYER_COLOR_VIOLETX) then
+        return "Violet"
+      elseif (PColor == PLAYER_COLOR_WHEATX) then
+        return "Wheat"
+      elseif (PColor == PLAYER_COLOR_PEACHX) then
+        return "Peach"
+      elseif (PColor == PLAYER_COLOR_MINTX) then
+        return "Mint"
+      elseif (PColor == PLAYER_COLOR_LAVENDERX) then
+        return "Lavender"
+      elseif (PColor == PLAYER_COLOR_COALX) then
+        return "Coal"
+      elseif (PColor == PLAYER_COLOR_SNOWX) then
+        return "Snow"
+      elseif (PColor == PLAYER_COLOR_EMERALDX) then
+        return "Emerald"
+      elseif (PColor == PLAYER_COLOR_PEANUTX) then
+        return "Peanut"
+      endif
+     endif
   endif
   //Returns text version
   return ""
@@ -7427,21 +7440,21 @@ function InitGlobalSettings takes nothing returns nothing
 #INCLUDETABLE <$VER$\GlobalSettings.txt> #EFR
   set %1 = %2
 #ENDINCLUDE
-    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
+    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP and GetPlayerController(Player(14)) != MAP_CONTROL_NEUTRAL and GetPlayerController(Player(14)) != MAP_CONTROL_RESCUABLE then
 	  set PLAYERPASSIVE = 27
 	  set PLAYERAGGRESSIVE = 24
-	  // set PLAYER_COLOR_MAROONX             = PLAYER_COLOR_MAROON
-      // set PLAYER_COLOR_NAVYX               = PLAYER_COLOR_NAVY
-      // set PLAYER_COLOR_TURQUOISEX          = PLAYER_COLOR_TURQUOISE
-      // set PLAYER_COLOR_VIOLETX             = PLAYER_COLOR_VIOLET
-      // set PLAYER_COLOR_WHEATX              = PLAYER_COLOR_WHEAT
-      // set PLAYER_COLOR_PEACHX              = PLAYER_COLOR_PEACH
-      // set PLAYER_COLOR_MINTX               = PLAYER_COLOR_MINT
-      // set PLAYER_COLOR_LAVENDERX           = PLAYER_COLOR_LAVENDER
-      // set PLAYER_COLOR_COALX               = PLAYER_COLOR_COAL
-      // set PLAYER_COLOR_SNOWX               = PLAYER_COLOR_SNOW
-      // set PLAYER_COLOR_EMERALDX            = PLAYER_COLOR_EMERALD
-      // set PLAYER_COLOR_PEANUTX             = PLAYER_COLOR_PEANUT
+	  set PLAYER_COLOR_MAROONX             = ConvertPlayerColor(12)
+      set PLAYER_COLOR_NAVYX               = ConvertPlayerColor(13)
+      set PLAYER_COLOR_TURQUOISEX          = ConvertPlayerColor(14)
+      set PLAYER_COLOR_VIOLETX             = ConvertPlayerColor(15)
+      set PLAYER_COLOR_WHEATX              = ConvertPlayerColor(16)
+      set PLAYER_COLOR_PEACHX              = ConvertPlayerColor(17)
+      set PLAYER_COLOR_MINTX               = ConvertPlayerColor(18)
+      set PLAYER_COLOR_LAVENDERX           = ConvertPlayerColor(19)
+      set PLAYER_COLOR_COALX               = ConvertPlayerColor(20)
+      set PLAYER_COLOR_SNOWX               = ConvertPlayerColor(21)
+      set PLAYER_COLOR_EMERALDX            = ConvertPlayerColor(22)
+      set PLAYER_COLOR_PEANUTX             = ConvertPlayerColor(23)
     endif
 endfunction
 

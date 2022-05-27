@@ -29,7 +29,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Fixed
 - Fix the chinese language encoding issues(from [3.0.1]) 
-- Improved support for 24 players. (from [3.0.0]) （no-native，only  identify player ,cannot identify color ）
+- Improved support for 24 players. (from [3.0.0]) （no-native）
+  - All 24 player colours are now supported by AMAI.(from [3.0.0]) 
   - Various messaging and attack targeting will now work with more than 12 players.(from [3.0.0]) 
   - Profiles can now be reused by AI players. This is useful for > 12 players in a game as there is not always enough profiles to set unique profiles. (from [3.0.0]) 
   - function IsProfileUsed used [HaveSavedInteger(com, PROFILE_USED, profile)]
