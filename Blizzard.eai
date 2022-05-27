@@ -897,9 +897,9 @@ function Commander takes nothing returns nothing
   elseif Comp != Player(playercreep) then
     if GetPlayerController(Comp) != MAP_CONTROL_COMPUTER then
       call DisplayToTP(not_specified_computer)
-      return
+	  return
     elseif not IsPlayerAlly(GetTriggerPlayer(), Comp) then
-      call DisplayFromPlayer(Comp, chat_no_ally)
+	  call DisplayFromPlayer(Comp, chat_no_ally)
       return
     endif
   endif

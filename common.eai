@@ -1881,7 +1881,7 @@ function InitCT takes nothing returns nothing
   call AddToCT("%1")
 #ENDINCLUDE
   call AddToCT("#")
-  call AddToCT("\"") 
+  call AddToCT("\"")
   call AddToCT("\\")
   //call AddToCT("{")
   //call AddToCT("}")
@@ -7427,6 +7427,22 @@ function InitGlobalSettings takes nothing returns nothing
 #INCLUDETABLE <$VER$\GlobalSettings.txt> #EFR
   set %1 = %2
 #ENDINCLUDE
+    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
+	  set PLAYERPASSIVE = 27
+	  set PLAYERAGGRESSIVE = 24
+    endif
+	  // set PLAYER_COLOR_MAROON             = ConvertPlayerColor(12)
+      // set PLAYER_COLOR_NAVY               = ConvertPlayerColor(13)
+      // set PLAYER_COLOR_TURQUOISE          = ConvertPlayerColor(14)
+      // set PLAYER_COLOR_VIOLET             = ConvertPlayerColor(15)
+      // set PLAYER_COLOR_WHEAT              = ConvertPlayerColor(16)
+      // set PLAYER_COLOR_PEACH              = ConvertPlayerColor(17)
+      // set PLAYER_COLOR_MINT               = ConvertPlayerColor(18)
+      // set PLAYER_COLOR_LAVENDER           = ConvertPlayerColor(19)
+      // set PLAYER_COLOR_COAL               = ConvertPlayerColor(20)
+      // set PLAYER_COLOR_SNOW               = ConvertPlayerColor(21)
+      // set PLAYER_COLOR_EMERALD            = ConvertPlayerColor(22)
+      // set PLAYER_COLOR_PEANUT             = ConvertPlayerColor(23)
 endfunction
 
 //===========================================================================
@@ -11934,23 +11950,6 @@ endfunction
 
 //============================================================================
 function InitAI takes nothing returns nothing
-    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
-	  set PLAYERPASSIVE = 27
-	  set PLAYERAGGRESSIVE = 24
-	  // set PLAYER_COLOR_MAROON             = ConvertPlayerColor(12)
-      // set PLAYER_COLOR_NAVY               = ConvertPlayerColor(13)
-      // set PLAYER_COLOR_TURQUOISE          = ConvertPlayerColor(14)
-      // set PLAYER_COLOR_VIOLET             = ConvertPlayerColor(15)
-      // set PLAYER_COLOR_WHEAT              = ConvertPlayerColor(16)
-      // set PLAYER_COLOR_PEACH              = ConvertPlayerColor(17)
-      // set PLAYER_COLOR_MINT               = ConvertPlayerColor(18)
-      // set PLAYER_COLOR_LAVENDER           = ConvertPlayerColor(19)
-      // set PLAYER_COLOR_COAL               = ConvertPlayerColor(20)
-      // set PLAYER_COLOR_SNOW               = ConvertPlayerColor(21)
-      // set PLAYER_COLOR_EMERALD            = ConvertPlayerColor(22)
-      // set PLAYER_COLOR_PEANUT             = ConvertPlayerColor(23)
-    endif
-
     set ai_player = Player(GetAiPlayer())
     set sleep_seconds = 0
 	call InitAiUnits()
