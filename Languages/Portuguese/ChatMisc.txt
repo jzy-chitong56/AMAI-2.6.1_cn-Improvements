@@ -4,3 +4,4 @@ chat_towerrush	Vou tentar fazer um towerrush em alguem
 chat_no_orc	Eu nao quero fazer nenhum towerrush
 militia_expansion_chat	Estou indo para a expansao da mil¨ªcia aqui
 chat_dynamic_counter	e combatendo os inimigos 
+invalid_strategy_number	Numero de estrategia invalido
