@@ -250,8 +250,8 @@ globals
 //==============================================================
 #PRAGMA START VERSION SETTINGS
     real sleep_multiplier = 1  // increases performance by checking stuff not so often
-    integer slm_start = 10  // how many computer players is needed tor the sleep multiplier to start increasing
-    integer slm_end = 23 // how many computer players is needed tor the sleep multiplier to stop increasing
+    integer slm_start = 6  // how many computer players is needed tor the sleep multiplier to start increasing
+    integer slm_end = 10 // how many computer players is needed tor the sleep multiplier to stop increasing
     real slm_start_mult = 1 // how much is the sleep multiplied when it's below the slm_start codition
     real slm_end_mult = 3  // how much is the sleep multiplied when it's above the slm_end codition
     real hero_radius = 200  // scanning this small area around hero to detect if the hero gets surrounded by enemy or is in danger of becoming that so it should move
@@ -7430,19 +7430,19 @@ function InitGlobalSettings takes nothing returns nothing
     if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP then
 	  set PLAYERPASSIVE = 27
 	  set PLAYERAGGRESSIVE = 24
+	  // set PLAYER_COLOR_MAROONX             = PLAYER_COLOR_MAROON
+      // set PLAYER_COLOR_NAVYX               = PLAYER_COLOR_NAVY
+      // set PLAYER_COLOR_TURQUOISEX          = PLAYER_COLOR_TURQUOISE
+      // set PLAYER_COLOR_VIOLETX             = PLAYER_COLOR_VIOLET
+      // set PLAYER_COLOR_WHEATX              = PLAYER_COLOR_WHEAT
+      // set PLAYER_COLOR_PEACHX              = PLAYER_COLOR_PEACH
+      // set PLAYER_COLOR_MINTX               = PLAYER_COLOR_MINT
+      // set PLAYER_COLOR_LAVENDERX           = PLAYER_COLOR_LAVENDER
+      // set PLAYER_COLOR_COALX               = PLAYER_COLOR_COAL
+      // set PLAYER_COLOR_SNOWX               = PLAYER_COLOR_SNOW
+      // set PLAYER_COLOR_EMERALDX            = PLAYER_COLOR_EMERALD
+      // set PLAYER_COLOR_PEANUTX             = PLAYER_COLOR_PEANUT
     endif
-	  // set PLAYER_COLOR_MAROON             = ConvertPlayerColor(12)
-      // set PLAYER_COLOR_NAVY               = ConvertPlayerColor(13)
-      // set PLAYER_COLOR_TURQUOISE          = ConvertPlayerColor(14)
-      // set PLAYER_COLOR_VIOLET             = ConvertPlayerColor(15)
-      // set PLAYER_COLOR_WHEAT              = ConvertPlayerColor(16)
-      // set PLAYER_COLOR_PEACH              = ConvertPlayerColor(17)
-      // set PLAYER_COLOR_MINT               = ConvertPlayerColor(18)
-      // set PLAYER_COLOR_LAVENDER           = ConvertPlayerColor(19)
-      // set PLAYER_COLOR_COAL               = ConvertPlayerColor(20)
-      // set PLAYER_COLOR_SNOW               = ConvertPlayerColor(21)
-      // set PLAYER_COLOR_EMERALD            = ConvertPlayerColor(22)
-      // set PLAYER_COLOR_PEANUT             = ConvertPlayerColor(23)
 endfunction
 
 //===========================================================================
@@ -7586,6 +7586,10 @@ function InitAMAI takes nothing returns nothing
     if c_enemy_total == 1 and c_ally_total == 0 then
       set game_is_1on1 = true
     endif
+	if PLAYERAGGRESSIVE != 12 then
+	  set slm_start = 9
+	  set slm_end = 23
+	endif
     set sleep_multiplier = sleep_multiplier * LinearInterpolation(I2R(slm_start), I2R(slm_end), slm_start_mult, slm_end_mult, I2R(c_ai_total))
     set difficulty = MeleeDifficulty()
     set income_per_mine = income_per_mine * Max(difficulty - 1, 1)
