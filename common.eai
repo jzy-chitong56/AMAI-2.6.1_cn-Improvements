@@ -7162,7 +7162,7 @@ function cmd_misc takes integer cmd, integer data returns nothing
       set strategy = data
       set chosen_strategy = strategy
     else
-      call DisplayToAllies("invalid_strategy_number")
+      call DisplayToAllies(invalid_strategy_number)
     endif
 
   elseif cmd == 71 then // change language
