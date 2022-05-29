@@ -564,14 +564,14 @@ function Convert2Player takes string Comp, boolean all_allowed returns player
   else
   //Compares the color until we get a match then stores that player
   loop
-    exitwhen((CColor == GetPlayerColor(Player(j))) or (j > playermax))
+    exitwhen((CColor == GetPlayerColor(Player(j))) or (j > (playermax - 1)))
     set j = j + 1
     if (j > (playermax - 1)) then
       call DisplayToTP(color_word_mistyped)
       //return null
     endif
   endloop
-	if j <= playermax then
+	if j <= (playermax - 1) then
 		set theplayer = Player(j)
 	endif
   endif
