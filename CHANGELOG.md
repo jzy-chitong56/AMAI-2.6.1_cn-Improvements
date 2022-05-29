@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - New chinese language translation, include Blizzard.eai [function Tribute]
 - Console add Page turning，adapted more than 12  AIPlayer and give more Strategy choose [Blizzard.eai]
 - if no HumanPlayer in game play, the first Observer must choose language 
-- translation add more sentence , all language(translate by google)
+- translation add more sentence for all language(translate by google)
 
 ### Changed
 - Computer skill level is now shown by default on AMAI players. (from [3.0.0]) 
@@ -25,27 +25,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
    - Hero priorities for building and resurrecting increased to ensure there are being built first.
 - Very minor balance tweak so less expensive units food wise are needed before AI starts to consider [all] armor or weapon upgrades for them.  (from [3.1.1])
 - Fix Night Elf initial mining logic such that they build the starting buildings first before completely filling the gold mine. (Pixyy) (from [3.1.1])
+- Creep building detection range slightly increased(Pixyy) (from [3.1.0])
+- Front base distance range increased(Pixyy) (from [3.1.0])
+- Reduced number of mines needed before going into high upkeep(Pixyy) (from [3.1.0])
+- Tweaks to town portal so more likely to be used for lower threats(Pixyy) (from [3.1.0])
+- Synchronization part function GetArmyHealthState change(from common.eai)
+- Synchronization function UpdateDebugPlayer and call UpdateDebugPlayer(from common.eai)
 - if no HumanPlayer in game play, the first Observer must choose language 
+- debug_player 1 → 0(from common.eai)
 
 ### Fixed
 - Fix the chinese language encoding issues(from [3.0.1]) 
-- Improved support for 24 players. (from [3.0.0]) （no-native）
+- Improved support for 24 players. (from [3.0.0]) （no-native）-- Automatic according to version（Above or below the war3_1.29）
   - All 24 player colours are now supported by AMAI.(from [3.0.0]) 
   - Various messaging and attack targeting will now work with more than 12 players.(from [3.0.0]) 
   - Profiles can now be reused by AI players. This is useful for > 12 players in a game as there is not always enough profiles to set unique profiles. (from [3.0.0]) 
   - function IsProfileUsed used [HaveSavedInteger(com, PROFILE_USED, profile)]
   - function InitProfile used [call SaveInteger(com, PROFILE_USED, profile, profile)]
-  - Blizzard.eai，Blizzard1~4.j，BlizzardVAI.eai，DETECT_DEFEAT.eai，REVEAL_ENEMY.eai，UPDATE_STRENGTH.eai，MICRO_HERO.eai，common.eai， ALL 12players→24players and 13players→23players
+  - Blizzard.eai，Blizzard1~4.j，BlizzardVAI.eai，DETECT_DEFEAT.eai，REVEAL_ENEMY.eai，UPDATE_STRENGTH.eai，MICRO_HERO.eai，common.eai，TOWER_RUSH.eai, ARMY_TRACK.eai, RETREAT_CONTROL.eai, RESET_WINDWALKER.eai, MILITIA_EXPAND.eai, MICRO_UNITS.eai, HARASS.eai, FOCUSFIRE_CONTROL.eai,   ALL 12players→24players , 13players→23players, 15players→27players()
   - common.eai，PlayerNeutralExtra 14players→26players （self-adaption）
-  - common.eai , sleep_multiplier , slm_start = 10 , slm_end = 23 , slm_end_mult = 3
-  - GlobalSettings.txt , sleep_multiplier , slm_start = 10 , slm_end = 23 
-  
+  - common.eai , sleep_multiplier , slm_start = 6 (war3_1.29 Automatic change to 9), slm_end = 10 (war3_1.29 Automatic change to 23), slm_end_mult = 3
+  - GlobalSettings.txt , sleep_multiplier , slm_start = 6 , slm_end = 10 ,  slm_end_mult = 3
 - Tweaked ranged units to avoid melee units only if damaged to 70% instead of 90% and reduced distance to trigger slightly. (Pixyy) (from [3.1.0]) 
 - Fixed an issue where healing totems are not cast correctly. (Pixyy) (from [3.1.0]) 
 - Front base distance range slightly increased again to help fix night elf troops getting stuck in base(now is 900). (Pixyy) (from [3.1.0]) 
 - Heroes a little more likely to teleport to rescue a town regardless of the profiles aggression and smaller threat levels. (Pixyy) (from [3.1.0]) 
 - Fixed an issue where human upgrades magic sentry and flare could not be researched by the AI. (Pixyy) (from [3.1.0]) 
 - Fixed some not chinese language translation
+- Fixed the Dialog only show title at first
 
 ## [2.6.1] - 2021-01-13
 - Fixed support for pre-1.32 versions.
