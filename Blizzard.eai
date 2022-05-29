@@ -1543,7 +1543,6 @@ function BuildTributeDialogs takes nothing returns nothing
     set i = i + 1
   endloop
   call AddCancelButton(tribute_dlg)
-  //set t_one = CreateTrigger()
   set tribute_dlg_length = i
   call TriggerRegisterDialogEvent(t_two, tribute_dlg)
   call TriggerAddAction(t_two, function TributeAmountDialogResponse)
