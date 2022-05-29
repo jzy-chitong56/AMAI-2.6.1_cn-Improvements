@@ -59,7 +59,7 @@ Towers	防御塔
 Current screen	当前地点
 Selected unit	选择的单位
 Towerrush (Orc only	防御塔快攻（仅兽族可用）
-Enemy	敌人
+Enemy	指定玩家
 Start/Restart	开始/重新开始行动
 No Strategy Change	关闭动态战术
 Build	建造
