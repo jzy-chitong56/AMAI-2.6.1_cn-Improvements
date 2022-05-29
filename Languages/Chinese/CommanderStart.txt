@@ -1,9 +1,9 @@
 ﻿这张地图包含AMAI和智能指挥模块（AMAI_2.6.1_cn-24人-非原生）
 输入'CMD:Help'查看帮助信息，按 ESC 可打开控制台
 登陆 https://github.com/SMUnlimited/AMAI 查询更新和其他信息
-支持魔兽1.24b~1.32（B站搜索 AMAI 2022 获取仅支持1.29以上的原生24人最新版）
+支持魔兽1.24b~1.32及以上（B站搜索 AMAI 2022 获取仅支持1.29以上的原生24人最新版）
 建议使用魔兽重置版，搭配AMAI_3.1.1（或更高）及淬火食用
 AMAI作者：AIAndy, Zalamander, DKSlayer, Strategy Master, Pixyy
 汉化：Dr.Fan、Sheeryiro（武汉大学）-完善：KeamSpring、JZY（NGA：jzylwf）
 专为非重置版玩家汉化，已同步部分3.1.1改动
-已知问题：帮助信息未汉化；中途更换语言效果不佳，AI不会鸟德变乌鸦，未完美适配1.32.10，无法适配24种颜色（非原生的问题）
+已知问题：帮助信息未汉化；中途更换语言效果不佳，AI不会鸟德变乌鸦，未完美适配1.32.10
