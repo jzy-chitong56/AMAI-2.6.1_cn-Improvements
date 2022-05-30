@@ -971,16 +971,16 @@ function DialogResponse takes nothing returns nothing
       set c = c + 1
       exitwhen s == dlg_string[c] or c >= dlg_length
     endloop
-	if s != null then
-      call DialogSetMessage(cdlg_dialog[i], s)
-      call DialogSetMessage(tribute_type_dlg, dlghdr_tribute_type)
+	if d == tribute_type_dlg then
+	  call DialogSetMessage(tribute_type_dlg, dlghdr_tribute_type)
+	elseif d == player_dialog then
       call DialogSetMessage(player_dialog, dlghdr_choose_player)
-      call DialogSetMessage(player_dialog_one, dlghdr_choose_player)
-      call DialogSetMessage(player_dialog_two, dlghdr_choose_player)
+	elseif d == number_dialog then
       call DialogSetMessage(number_dialog, dlghdr_choose_number)
-      call DialogSetMessage(number_dialog_one, dlghdr_choose_number)
-      call DialogSetMessage(number_dialog_two, dlghdr_choose_number)
+	else
+      call DialogSetMessage(cdlg_dialog[i], s)
 	endif
+
     call DialogDisplay(GetTriggerPlayer(), cdlg_dialog[i], true)
     return
   endif
@@ -1103,7 +1103,7 @@ function NumberDialogResponse takes nothing returns nothing
   if i == 8 then
     call DialogSetMessage(number_dialog_one, dlghdr_choose_number)
 	call DialogDisplay(GetTriggerPlayer(), number_dialog_one, true)
-  elseif i == 8 then
+  elseif i == 9 then
     call DialogSetMessage(number_dialog, dlghdr_choose_number)
   	call DialogDisplay(GetTriggerPlayer(), number_dialog, true)
   elseif i == 18 then
