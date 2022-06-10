@@ -317,7 +317,7 @@ else
       call BasicExpansionAM( GetMinesOwned() < 2 ,GREAT_HALL, 37)
       call BuildFront(1, ORC_WATCH_TOWER, 36)
       call BuildUnit(6, GRUNT, 25)
-      call BuildUnit(1, STRONGHOLD, 55)
+      call BuildUnit(1, STRONGHOLD, 45)
       call BuildUnit(2, CATAPULT, 22)
 
 
@@ -904,7 +904,7 @@ else
       call BuildUnit(10, GRUNT, 50)
       call BuildUnit(1, CATAPULT, 30)
       call BuildUnit(1, hero[1], 80)
-      call BuildUnit(1, STRONGHOLD, 60)
+      call BuildUnit(1, STRONGHOLD, 50)
 
 
 
@@ -1477,7 +1477,7 @@ else
       call BuildUnit(2, ORC_WATCH_TOWER, 60)
       call BuildUnit(1, VOODOO_LOUNGE, 55)
       call BuildUnit(1, hero[1], 70)
-      call BuildUnit(1, STRONGHOLD, 80)
+      call BuildUnit(1, STRONGHOLD, 55)
       if not (c_enemy_total == c_enemy[R_ELF]) then
         call BuildUpgr(1, UPG_ORC_SPIKES, 10)
       endif
@@ -1533,7 +1533,7 @@ if tier == 3 then
       call BuildUnit(13, TAUREN, 50)
       call BuildUnit(4, RAIDER, 50)
       call BuildUnit(1, VOODOO_LOUNGE, 50)
-      
+      call BuildUnit(3, SPIRIT_WALKER, 48)
       call BuildUnit(3, WITCH_DOCTOR, 70)
       call BuildUpgr(2, UPG_ORC_DOCS, 75)
 
@@ -1553,6 +1553,7 @@ elseif tier == 2 then
       call BuildUnit(4, RAIDER, 50)
       call BuildUnit(1, FORTRESS, 45)
       call BuildUnit(1, VOODOO_LOUNGE, 50)
+      call BuildUnit(2, SPIRIT_WALKER, 48)
       call BuildUnit(2, WITCH_DOCTOR, 70)
       call BuildUpgr(1, UPG_ORC_DOCS, 75)
 
@@ -1568,7 +1569,7 @@ else
       
       call BuildUnit(10, GRUNT, 50)
       call BuildUnit(1, hero[1], 80)
-      call BuildUnit(1, STRONGHOLD, 60)
+      call BuildUnit(1, STRONGHOLD, 55)
 
 
 
