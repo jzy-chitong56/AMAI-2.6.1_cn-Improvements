@@ -53,6 +53,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed an issue where human upgrades magic sentry and flare could not be researched by the AI. (Pixyy) (from [3.1.0]) 
 - Fixed some not chinese language translation
 - Fixed the Dialog only show title at first
+- Fixed the Dialog cannot change language
 
 ## [2.6.1] - 2021-01-13
 - Fixed support for pre-1.32 versions.
