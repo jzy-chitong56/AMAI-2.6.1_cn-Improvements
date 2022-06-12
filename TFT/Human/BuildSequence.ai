@@ -307,7 +307,7 @@ elseif tier == 2 then
       call BuildFront(1, ARCANE_TOWER, 57)
       call BuildUnit(1, hero[2], 50)
       call BuildUnit(2, MORTAR, 45)
-      call BuildUnit(1, CASTLE, 40)
+      call BuildUnit(1, CASTLE, 45)
 
 
 
@@ -339,14 +339,14 @@ elseif tier == 2 then
 else
 // THIS IS REPLICA OF BLIZZARDS AI
 
-        call BuildUnit(  1, hero[1], 80      )
-        call BuildUnit(  8, FOOTMAN , 65   )
-        call BuildUnit(  3, RIFLEMAN , 55    )
-        call BuildUnit(  1, ARCANE_VAULT, 54 )
+        call BuildUnit(1, hero[1], 80)
+        call BuildUnit(8, FOOTMAN , 65)
+        call BuildUnit(3, RIFLEMAN , 55)
+        call BuildUnit(1, ARCANE_VAULT, 54)
         call BasicExpansionAM( GetMinesOwned() < 2 ,TOWN_HALL, 53)
         call BuildFront(1, ARCANE_TOWER, 45)
-        call BuildUnit(  4, RIFLEMAN, 43    )
-        call BuildUnit(  1, KEEP, 42        )
+        call BuildUnit(4, RIFLEMAN, 43)
+        call BuildUnit(1, KEEP, 42)
 
 
 
@@ -453,7 +453,7 @@ if tier == 3 then
 
 elseif tier == 2 then
 
-      call BuildUnit(1, CASTLE, 40)
+      call BuildUnit(1, CASTLE, 45)
       call BuildUnit(1, hero[1], 80)
       call BuildUnit(1, hero[2], 60)
       call BuildUnit(10, SORCERESS, 44)
@@ -1504,7 +1504,7 @@ if tier == 3 then
 elseif tier == 2 then
 
       call BuildUnit(15, HUMAN_DRAGON_HAWK, 45)
-      call BuildUnit(1, CASTLE, 45)
+      call BuildUnit(1, CASTLE, 55)
       call BuildUnit(1, hero[1], 80)
       call BuildUnit(1, hero[2], 60)
       call BuildUnit(1, ARCANE_VAULT, 60)
@@ -2161,7 +2161,7 @@ elseif tier == 2 then
 	call BuildUnit(15, SORCERESS, 60)
 	call BuildUnit(5, PRIEST, 80)
     call BuildUnit(3, SPELL_BREAKER, 70)
-	call BuildUnit(1, CASTLE, 60)
+	call BuildUnit(1, CASTLE, 65)
 	call BuildUpgr(1, UPG_PRAYING, 90)
 	call BuildUpgr(1, UPG_SORCERY, 90)
 
