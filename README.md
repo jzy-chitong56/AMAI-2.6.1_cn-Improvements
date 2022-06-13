@@ -22,6 +22,7 @@ Tested with strawbery perl 5.30 and Tk 804.034
 - Run up a custom game and select the map to play.
 
 【安装 perl 后，解压程序，运行*makeTFT.bat*，再按 https://www.bilibili.com/video/BV1nZ4y127XV/ 教程安装（在程序文件夹根目录右键>打开POWERSHELL窗口-WIN10以上系统，输入： perl InstallTFTtoDir.pl "地图文件夹路径，如：C:\Users\Administrator\Documents\Warcraft III\Maps\AMAI"）】
+
 【如果运行*makeTFT.bat*报错，请确认未修改过程序任意文件，请具备基础再行修改】
 
 # Playing AMAI
