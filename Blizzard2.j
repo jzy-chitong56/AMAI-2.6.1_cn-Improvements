@@ -572,7 +572,8 @@ endfunction
 // clipping the result to 0..max in case the input is invalid.
 //
 function PercentToInt takes real percentage, integer max returns integer
-    local integer result = R2I(percentage * I2R(max) * 0.01)
+    local real realpercent = percentage * I2R(max) * 0.01
+    local integer result = MathRound(realpercent)
 
     if (result < 0) then
         set result = 0
@@ -753,10 +754,11 @@ endfunction
 //===========================================================================
 function SmartCameraPanBJ takes player whichPlayer, location loc, real duration returns nothing
     local real dist
+	local location cameraLoc = GetCameraTargetPositionLoc()
     if (GetLocalPlayer() == whichPlayer) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
 
-        set dist = DistanceBetweenPoints(loc, GetCameraTargetPositionLoc())
+        set dist = DistanceBetweenPoints(loc, cameraLoc)
         if (dist >= bj_SMARTPAN_TRESHOLD_SNAP) then
             // If the user is too far away, snap the camera.
             call PanCameraToTimed(GetLocationX(loc), GetLocationY(loc), 0)
@@ -767,6 +769,7 @@ function SmartCameraPanBJ takes player whichPlayer, location loc, real duration 
             // User is close enough, so don't touch the camera.
         endif
     endif
+	call RemoveLocation(cameraLoc)
 endfunction
 
 //===========================================================================
