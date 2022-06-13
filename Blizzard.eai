@@ -554,8 +554,8 @@ function Convert2Player takes string Comp, boolean all_allowed returns player
 	
   elseif (CColor == null) then
    //Makes Sure color was typed Correctly  
-    //Makes sure number is 0 or bigger and 11 or 23 or smaller
-    if (S2I(Comp) >= 0) and (S2I(Comp) <= playermax) then
+    //Makes sure number is 0 or bigger and (11 or 23) or smaller
+    if (S2I(Comp) >= 0) and (S2I(Comp) <= (playermax - 1)) then
 	  set theplayer = Player(S2I(Comp))
       //return Player(S2I(Comp))
     else
@@ -572,7 +572,7 @@ function Convert2Player takes string Comp, boolean all_allowed returns player
       //return null
     endif
   endloop
-	if j <= playermax then
+	if j <= (playermax - 1) then
 		set theplayer = Player(j)
 	endif
   endif
