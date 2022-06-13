@@ -572,7 +572,7 @@ function Convert2Player takes string Comp, boolean all_allowed returns player
       //return null
     endif
   endloop
-	if j <= (playermax - 1) then
+	if j <= playermax then
 		set theplayer = Player(j)
 	endif
   endif
