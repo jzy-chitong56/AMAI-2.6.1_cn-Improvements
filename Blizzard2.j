@@ -572,8 +572,7 @@ endfunction
 // clipping the result to 0..max in case the input is invalid.
 //
 function PercentToInt takes real percentage, integer max returns integer
-    local real realpercent = percentage * I2R(max) * 0.01
-    local integer result = MathRound(realpercent)
+    local integer result = R2I(percentage * I2R(max) * 0.01)
 
     if (result < 0) then
         set result = 0
