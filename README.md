@@ -21,9 +21,9 @@ Tested with strawbery perl 5.30 and Tk 804.034
 - Run *InstallTFTToMap.bat "C:\mymap.w3m"* to install the AI scripts to Warcraft 3 maps. 
 - Run up a custom game and select the map to play.
 
-【安装 perl 后，解压程序，运行*makeTFT.bat*，再按 https://www.bilibili.com/video/BV1nZ4y127XV/ 教程安装（在程序文件夹根目录右键>打开POWERSHELL窗口-WIN10以上系统，输入： perl InstallTFTtoDir.pl "地图文件夹路径，如：C:\Users\Administrator\Documents\Warcraft III\Maps\AMAI"）】
+【安装 perl 后，下载并解压程序（下载教程：https://blog.csdn.net/qq_53028759/article/details/123591435），运行*makeTFT.bat*，再按 https://www.bilibili.com/video/BV1nZ4y127XV/ 教程安装（在程序文件夹根目录右键>打开POWERSHELL窗口-WIN10以上系统，输入： perl InstallTFTtoDir.pl "地图文件夹路径，如：C:\Users\Administrator\Documents\Warcraft III\Maps\AMAI"）】
 
-【如果运行*makeTFT.bat*报错，请确认未修改过程序任意文件，请具备基础再行修改】
+【如果运行 *makeTFT.bat* 报错，请确认未修改过程序任意文件，新手请勿随意修改】
 
 # Playing AMAI
 First my suggestion is to create a subfolder in your "maps" folder like "maps\AMAI" and copy the maps you intend to use AMAI with there.
