@@ -4370,6 +4370,23 @@ function ConfigureNeutralVictim takes nothing returns nothing
     local player indexPlayer
     local player neutralVictim = Player(playercreep - 1)
 
+    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP and GetPlayerController(Player(14)) != MAP_CONTROL_NEUTRAL and GetPlayerController(Player(14)) != MAP_CONTROL_RESCUABLE then
+	  set playercreep = 26
+	  set playermax = 24
+	  set PLAYER_COLOR_MAROONX             = ConvertPlayerColor(12)
+      set PLAYER_COLOR_NAVYX               = ConvertPlayerColor(13)
+      set PLAYER_COLOR_TURQUOISEX          = ConvertPlayerColor(14)
+      set PLAYER_COLOR_VIOLETX             = ConvertPlayerColor(15)
+      set PLAYER_COLOR_WHEATX              = ConvertPlayerColor(16)
+      set PLAYER_COLOR_PEACHX              = ConvertPlayerColor(17)
+      set PLAYER_COLOR_MINTX               = ConvertPlayerColor(18)
+      set PLAYER_COLOR_LAVENDERX           = ConvertPlayerColor(19)
+      set PLAYER_COLOR_COALX               = ConvertPlayerColor(20)
+      set PLAYER_COLOR_SNOWX               = ConvertPlayerColor(21)
+      set PLAYER_COLOR_EMERALDX            = ConvertPlayerColor(22)
+      set PLAYER_COLOR_PEANUTX             = ConvertPlayerColor(23)
+    endif
+
     set index = 0
     loop
         set indexPlayer = Player(index)
