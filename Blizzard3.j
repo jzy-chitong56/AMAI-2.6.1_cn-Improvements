@@ -91,7 +91,7 @@ function InitBlizzardGlobals takes nothing returns nothing
     // Init force presets
     set index = 0
     loop
-        exitwhen index == playercreep
+        exitwhen index == (playermax + 4)
         set bj_FORCE_PLAYER[index] = CreateForce()
         call ForceAddPlayer(bj_FORCE_PLAYER[index], Player(index))
         set index = index + 1

@@ -4368,7 +4368,7 @@ endfunction
 function ConfigureNeutralVictim takes nothing returns nothing
     local integer index
     local player indexPlayer
-    local player neutralVictim = Player(playercreep - 1)
+    local player neutralVictim = Player(playermax + 1)
 
     set index = 0
     loop
@@ -4392,7 +4392,7 @@ endfunction
 
 //===========================================================================
 function MakeUnitsPassiveForPlayerEnum takes nothing returns nothing
-    call SetUnitOwner(GetEnumUnit(), Player(playercreep - 1), false)
+    call SetUnitOwner(GetEnumUnit(), Player(playermax + 1), false)
 endfunction
 
 //===========================================================================
