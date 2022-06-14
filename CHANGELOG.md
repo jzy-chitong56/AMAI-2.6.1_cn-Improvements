@@ -5,12 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
-## [2.6.1-cn-24 players] - 2022-05-24
+## [2.6.1-cn] - 2022-06-15
 ### Added
 - New chinese language translation, include Blizzard.eai [function Tribute]
 - Console add Page turning，adapted more than 12  AIPlayer and give more Strategy choose [Blizzard.eai]
 - if no HumanPlayer in game play, the first Observer must choose language 
 - translation add more sentence for all language(translate by google)
+- Add Undead UPGRADE UPG_SKEL_MASTERY
 
 ### Changed
 - Computer skill level is now shown by default on AMAI players. (from [3.0.0]) 
@@ -33,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Synchronization function UpdateDebugPlayer and call UpdateDebugPlayer(from common.eai)
 - if no HumanPlayer in game play, the first Observer must choose language 
 - debug_player 1 → 0(from common.eai)
+- HUMAN UPGRADE UPG_SUN_BLADE UPGRADE need LUMBER_MILL,CASTLE,BLACKSMITH(on 1.32,UPG_SUN_BLADE no need UPGRADE)
 
 ### Fixed
 - Fix the chinese language encoding issues(from [3.0.1]) 
