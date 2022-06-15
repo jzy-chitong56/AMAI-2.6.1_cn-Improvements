@@ -2602,6 +2602,7 @@ endfunction
 
 //============================================================================
 function InitProfile takes nothing returns nothing
+  local integer i = 0
 
   call set_profiles()
 //  call getPreviousProfiles()
@@ -2611,7 +2612,8 @@ function InitProfile takes nothing returns nothing
   else
     loop
       set profile = GetRandomInt(0, profile_length)
-      exitwhen (p_race[profile] == R_RANDOM or p_race[profile] == own_race) and not IsProfileUsed(profile)
+      set i = i + 1 // Don't try and pick a profile beyond a sensible attempt limit
+      exitwhen (p_race[profile] == R_RANDOM or p_race[profile] == own_race) and (not IsProfileUsed(profile) or i > profile_length)
     endloop
   endif
 
