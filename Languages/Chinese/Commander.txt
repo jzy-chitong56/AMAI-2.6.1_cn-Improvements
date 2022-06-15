@@ -31,6 +31,6 @@ dlgbutton_lumber	选取的AI给我木材
 dlgbutton_give_gold	给选取的AI黄金
 dlgbutton_give_lumber	给选取的AI木材
 dlgbutton_tribute	交换资源（仅盟友有效）
-dlgbutton_commander	指挥模式（按ESC可指挥）
-dlgbutton_no_human	AI对战模式（真人会自爆）
-dlgbutton_ai_only	AI智能模式（按ESC只能暂停）
+dlgbutton_commander	指挥模式（按ESC指挥AI盟友）
+dlgbutton_no_human	无人模式（真人自爆后指挥）
+dlgbutton_ai_only	智能模式（不能指挥）
