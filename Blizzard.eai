@@ -1704,8 +1704,11 @@ endfunction
 function GameStartDlg takes nothing returns nothing
   local integer host = GetFirstHuman()
   local integer p = host
+  local timer t = CreateTimer()
   loop
     if p == -1 or IsPlayerObserver(Player(p)) then
+      //Timer that calls MapInit
+      call TimerStart(t,3.0, false, function MapInit)
       return
     endif
     exitwhen CheckAllyToControl(Player(p))
