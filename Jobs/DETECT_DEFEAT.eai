@@ -105,7 +105,7 @@ function CheckDefeated takes nothing returns nothing
 	  loop
 	      set u = FirstOfGroup(g)
 	      exitwhen u == null
-		if UnitAlive(u) and GetOwningPlayer(u) != Player(PLAYER_NEUTRAL_AGGRESSIVE) and GetOwningPlayer(u) != Player(PLAYERAGGRESSIVE) and IsPlayerEnemy(ai_player, GetOwningPlayer(u)) then
+		if UnitAlive(u) and GetOwningPlayer(u) != Player(PLAYERAGGRESSIVE) and GetOwningPlayer(u) != Player(PLAYERPASSIVE) and IsPlayerEnemy(ai_player, GetOwningPlayer(u)) then
 	      	set enemy_sum = enemy_sum + GetUnitStrength(u)
 		endif
 		call GroupRemoveUnit(g,u)
