@@ -50,7 +50,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
   - GlobalSettings.txt , sleep_multiplier , slm_start = 6 , slm_end = 10 ,  slm_end_mult = 3
 - Tweaked ranged units to avoid melee units only if damaged to 70% instead of 90% and reduced distance to trigger slightly. (Pixyy) (from [3.1.0]) 
 - Fixed an issue where healing totems are not cast correctly. (Pixyy) (from [3.1.0]) 
-- Front base distance range slightly increased again to help fix night elf troops getting stuck in base(now is 900). (Pixyy) (from [3.1.0]) 
+- Front base distance range slightly increased again to help fix night elf troops getting stuck in base(now is 1100). (Pixyy) (from [3.1.0]) 
 - Heroes a little more likely to teleport to rescue a town regardless of the profiles aggression and smaller threat levels. (Pixyy) (from [3.1.0]) 
 - Fixed an issue where human upgrades magic sentry and flare could not be researched by the AI. (Pixyy) (from [3.1.0]) 
 - Fixed some not chinese language translation
