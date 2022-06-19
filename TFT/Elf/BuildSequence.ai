@@ -84,9 +84,7 @@ function global_build_sequence takes nothing returns nothing
         call BuildItem(1, BOOTS_OF_SPEED, 50)
       endif
     if tier >= 2 then
-        if hero[1] != DEMON_HUNTER or hero[2] != DEMON_HUNTER or hero[3] != DEMON_HUNTER or hero[1] != MOON_PRIESTESS or hero[2] != MOON_PRIESTESS or hero[3] != MOON_PRIESTESS then
-            call BuildItem(1, LESSER_CLARITY_POTION, 40)
-        endif
+        call BuildItem(1, LESSER_CLARITY_POTION, 40)
     endif
 
       call BuildAtMine(1, DEN_OF_WONDERS, 80+(20*(tier-1)))
