@@ -80,11 +80,11 @@ function global_build_sequence takes nothing returns nothing
         call BuildItem(1, HEALING_POTION, 70)
         call BuildItem(1, TOWN_PORTAL, 150)
         call BuildItem(1, STAFF_OF_PRESERVATION, 40)
-      elseif hero[1]==WARDEN then
+      elseif hero[1]==WARDEN or hero[1] == DEMON_HUNTER then
         call BuildItem(1, BOOTS_OF_SPEED, 50)
       endif
     if tier >= 2 then
-        if hero[1] == WARDEN or hero[1] == KEEPER then
+        if hero[1] != DEMON_HUNTER or hero[2] != DEMON_HUNTER or hero[3] != DEMON_HUNTER or hero[1] != MOON_PRIESTESS or hero[2] != MOON_PRIESTESS or hero[3] != MOON_PRIESTESS then
             call BuildItem(1, LESSER_CLARITY_POTION, 40)
         endif
     endif
