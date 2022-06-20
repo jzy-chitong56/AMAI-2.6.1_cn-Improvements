@@ -56,6 +56,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed some not chinese language translation
 - Fixed the Dialog only show title at first
 - Fixed the Dialog cannot change language
+- Calibration the Player color 
 
 ## [2.6.1] - 2021-01-13
 - Fixed support for pre-1.32 versions.

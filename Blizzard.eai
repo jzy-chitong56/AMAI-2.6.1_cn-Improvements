@@ -314,56 +314,56 @@ endfunction
 
 function cs2s takes string s, playercolor c returns string
   if c == PLAYER_COLOR_RED then
-    return "|c00ff0000"+s+"|r"
+    return "|cffff0402"+s+"|r"
   elseif c == PLAYER_COLOR_BLUE then
-    return "|c000000ff"+s+"|r"
+    return "|cff0042ff"+s+"|r"
   elseif c == PLAYER_COLOR_CYAN then
-    return "|c0000ffff"+s+"|r"
+    return "|cff1be6ba"+s+"|r"
   elseif c == PLAYER_COLOR_PURPLE then
-    return "|c00660099"+s+"|r"
+    return "|cff550081"+s+"|r"
   elseif c == PLAYER_COLOR_YELLOW then
-    return "|c00ffff00"+s+"|r"
+    return "|cfffffc00"+s+"|r"
   elseif c == PLAYER_COLOR_ORANGE then
-    return "|c00ff9933"+s+"|r"
+    return "|cffff8a0d"+s+"|r"
   elseif c == PLAYER_COLOR_GREEN then
-    return "|c0000ff00"+s+"|r"
+    return "|cff20bf00"+s+"|r"
   elseif c == PLAYER_COLOR_PINK then
-    return "|c00ff00ff"+s+"|r"
+    return "|cffe35baf"+s+"|r"
   elseif c == PLAYER_COLOR_LIGHT_GRAY then
-    return "|c00dddddd"+s+"|r"
+    return "|cff949696"+s+"|r"
   elseif c == PLAYER_COLOR_LIGHT_BLUE then
-    return "|c0033ccff"+s+"|r"
+    return "|cff81bff1"+s+"|r"
   elseif c == PLAYER_COLOR_AQUA then
-    return "|c007fffd4"+s+"|r"
+    return "|cff106247"+s+"|r"
   else
     if  playermax != 12 then
       if c == PLAYER_COLOR_MAROONX then
-        return "|c00800000"+s+"|r"
+        return "|cff9c0000"+s+"|r"
       elseif c == PLAYER_COLOR_NAVYX then
-        return "|c00000080"+s+"|r"
+        return "|cff0000c2"+s+"|r"
       elseif c == PLAYER_COLOR_TURQUOISEX then
-        return "|c0040e0d0"+s+"|r"
+        return "|cff00ebff"+s+"|r"
       elseif c == PLAYER_COLOR_VIOLETX then
-        return "|c00ee82ee"+s+"|r"
+        return "|cffbd00ff"+s+"|r"
       elseif c == PLAYER_COLOR_WHEATX then
-        return "|c00f5deb3"+s+"|r"
+        return "|cffeccc86"+s+"|r"
       elseif c == PLAYER_COLOR_PEACHX then
-        return "|c00ffe5b4"+s+"|r"
+        return "|cfff7a48b"+s+"|r"
       elseif c == PLAYER_COLOR_MINTX then
-        return "|c0098ff98"+s+"|r"
+        return "|cffbfff80"+s+"|r"
       elseif c == PLAYER_COLOR_LAVENDERX then
-        return "|c00e6e6fa"+s+"|r"
+        return "|cffdbb8ec"+s+"|r"
       elseif c == PLAYER_COLOR_COALX then
-        return "|c00060607"+s+"|r"
+        return "|cff4f4f55"+s+"|r"
       elseif c == PLAYER_COLOR_SNOWX then
-        return "|c00fffafa"+s+"|r"
+        return "|cffecf0ff"+s+"|r"
       elseif c == PLAYER_COLOR_EMERALDX then
-        return "|c0050c878"+s+"|r"
+        return "|cff00781e"+s+"|r"
       elseif c == PLAYER_COLOR_PEANUTX then
-        return "|c00824432"+s+"|r"
+        return "|cffa46f34"+s+"|r"
       endif
     endif
-    return "|c00660000"+s+"|r"  //Brown
+    return "|cff4f2b05"+s+"|r"  //Brown
   endif
 endfunction
 
