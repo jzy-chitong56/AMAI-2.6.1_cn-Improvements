@@ -206,7 +206,8 @@ globals
     constant integer NEUTRAL_MANA_FOUNTAIN = 6
     constant integer NEUTRAL_SHIPYARD = 7
     constant integer NEUTRAL_MARKETPLACE = 8
-    
+    constant integer NEUTRAL_POWER_FOUNTAIN = 9
+
     constant integer UPKEEP_UNDECIDED = 0
     constant integer UPKEEP_NOT_ALLOWED = 1
     constant integer UPKEEP_ALLOWED = 2
@@ -6742,6 +6743,8 @@ function InitNeutralBuildings takes nothing returns nothing
     	set neutral_available[NEUTRAL_HEALING_FOUNTAIN] = true
     elseif GetUnitTypeId(u) == neutral_id[NEUTRAL_MANA_FOUNTAIN] then
     	set neutral_available[NEUTRAL_MANA_FOUNTAIN] = true
+    elseif GetUnitTypeId(u) == neutral_id[NEUTRAL_POWER_FOUNTAIN] then
+    	set neutral_available[NEUTRAL_POWER_FOUNTAIN] = true
     elseif GetUnitTypeId(u) == neutral_id[NEUTRAL_SHIPYARD] then
     	set neutral_available[NEUTRAL_SHIPYARD] = true
     elseif GetUnitTypeId(u) == neutral_id[NEUTRAL_MARKETPLACE] then
@@ -6827,7 +6830,7 @@ function CheckAllNeutrals takes nothing returns nothing
 
   call Sleep(5)
   loop
-	exitwhen i > 8
+	exitwhen i > 9
       call CheckNeutral(i)
 	set i = i + 1
   endloop
@@ -6838,6 +6841,10 @@ function CheckAllNeutrals takes nothing returns nothing
 
   if nearest_neutral[NEUTRAL_MANA_FOUNTAIN] != null then
     call TQAddJob(10, NEUTRAL_ENEMY_CHECK, NEUTRAL_MANA_FOUNTAIN)
+  endif
+
+  if nearest_neutral[NEUTRAL_POWER_FOUNTAIN] != null then
+    call TQAddJob(10, NEUTRAL_ENEMY_CHECK, NEUTRAL_POWER_FOUNTAIN)
   endif
 endfunction
 
@@ -6866,7 +6873,7 @@ function CheckAllNeutralsQuick takes nothing returns nothing
 	local integer i = 0
 	
   loop
-	exitwhen i > 8
+	exitwhen i > 9
       call CheckNeutralQuick(i)
 	set i = i + 1
   endloop
@@ -7442,24 +7449,24 @@ function InitGlobalSettings takes nothing returns nothing
 #INCLUDETABLE <$VER$\GlobalSettings.txt> #EFR
   set %1 = %2
 #ENDINCLUDE
-    if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP and GetPlayerController(Player(14)) != MAP_CONTROL_NEUTRAL and GetPlayerController(Player(14)) != MAP_CONTROL_RESCUABLE then
-	  set PLAYERPASSIVE = 27
-	  set PLAYERAGGRESSIVE = 24
-	  set PLAYER_COLOR_MAROONX             = ConvertPlayerColor(12)
-      set PLAYER_COLOR_NAVYX               = ConvertPlayerColor(13)
-      set PLAYER_COLOR_TURQUOISEX          = ConvertPlayerColor(14)
-      set PLAYER_COLOR_VIOLETX             = ConvertPlayerColor(15)
-      set PLAYER_COLOR_WHEATX              = ConvertPlayerColor(16)
-      set PLAYER_COLOR_PEACHX              = ConvertPlayerColor(17)
-      set PLAYER_COLOR_MINTX               = ConvertPlayerColor(18)
-      set PLAYER_COLOR_LAVENDERX           = ConvertPlayerColor(19)
-      set PLAYER_COLOR_COALX               = ConvertPlayerColor(20)
-      set PLAYER_COLOR_SNOWX               = ConvertPlayerColor(21)
-      set PLAYER_COLOR_EMERALDX            = ConvertPlayerColor(22)
-      set PLAYER_COLOR_PEANUTX             = ConvertPlayerColor(23)
-	  set slm_start = 9
-	  set slm_end = 23
-    endif
+  if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP and GetPlayerController(Player(14)) != MAP_CONTROL_NEUTRAL and GetPlayerController(Player(14)) != MAP_CONTROL_RESCUABLE then
+	set PLAYERPASSIVE = 27
+	set PLAYERAGGRESSIVE = 24
+	set PLAYER_COLOR_MAROONX             = ConvertPlayerColor(12)
+    set PLAYER_COLOR_NAVYX               = ConvertPlayerColor(13)
+    set PLAYER_COLOR_TURQUOISEX          = ConvertPlayerColor(14)
+    set PLAYER_COLOR_VIOLETX             = ConvertPlayerColor(15)
+    set PLAYER_COLOR_WHEATX              = ConvertPlayerColor(16)
+    set PLAYER_COLOR_PEACHX              = ConvertPlayerColor(17)
+    set PLAYER_COLOR_MINTX               = ConvertPlayerColor(18)
+    set PLAYER_COLOR_LAVENDERX           = ConvertPlayerColor(19)
+    set PLAYER_COLOR_COALX               = ConvertPlayerColor(20)
+    set PLAYER_COLOR_SNOWX               = ConvertPlayerColor(21)
+    set PLAYER_COLOR_EMERALDX            = ConvertPlayerColor(22)
+    set PLAYER_COLOR_PEANUTX             = ConvertPlayerColor(23)
+	set slm_start = 9
+	set slm_end = 23
+  endif
 endfunction
 
 //===========================================================================

@@ -58,6 +58,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed the Dialog cannot change language
 - Calibration the Player color 
 
+### Easter Egg
+- AI now can use power fountain (if map have power fountain)
+
 ## [2.6.1] - 2021-01-13
 - Fixed support for pre-1.32 versions.
 
