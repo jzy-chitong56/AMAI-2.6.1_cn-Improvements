@@ -57,6 +57,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed the Dialog only show title at first
 - Fixed the Dialog cannot change language
 - Calibration the Player color 
+- Add welcome message and opening tactical report Time of report (try to fix the problem of using default language for the first two reports)
 
 ### Easter Egg
 - AI now can use power fountain (if map have power fountain)

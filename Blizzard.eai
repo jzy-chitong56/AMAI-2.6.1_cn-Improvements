@@ -1798,7 +1798,7 @@ endfunction
 
 function InitCommander takes nothing returns nothing
   local timer t = CreateTimer()
-  call TimerStart(t,0.01, false, function LanguageDlg)
+  call TimerStart(t,1, false, function LanguageDlg)
 endfunction
 
 #INCLUDE <Blizzard3.j>
