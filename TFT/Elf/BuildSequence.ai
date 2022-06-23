@@ -688,7 +688,7 @@ function build_sequence_Hippo takes nothing returns nothing
 if tier == 3 then
       call BuildUnit(12, HIPPO_RIDER, 70)
       call BuildUnit(16, ARCHER, 50)
-      if (10 - TownCountDone(HIPPO_RIDER) > 0 then
+      if (10 - TownCountDone(HIPPO_RIDER)) > 0 then
         call BuildUnit((10 - TownCountDone(HIPPO_RIDER)), HIPPO, 30)
       elseif TownCountDone(HIPPO) < 4 then
         call BuildUnit(2, HIPPO, 40)
@@ -735,7 +735,7 @@ elseif tier == 2 then
 
       call BuildUnit(8, HIPPO_RIDER, 70)
       call BuildUnit(12, ARCHER, 50)
-      if (6 - TownCountDone(HIPPO_RIDER) > 0 then
+      if (6 - TownCountDone(HIPPO_RIDER)) > 0 then
         call BuildUnit((6 - TownCountDone(HIPPO_RIDER)), HIPPO, 30)
       elseif TownCountDone(HIPPO) < 4 then
         call BuildUnit(2, HIPPO, 40)
@@ -1146,7 +1146,7 @@ if tier == 3 then
       call BuildUnit(4, FAERIE_DRAGON, 50)
       call BuildUnit(10, HIPPO_RIDER, 70)
       call BuildUnit(12, ARCHER, 50)
-      if (8 - TownCountDone(HIPPO_RIDER) > 0 then
+      if (8 - TownCountDone(HIPPO_RIDER)) > 0 then
         call BuildUnit((8 - TownCountDone(HIPPO_RIDER)), HIPPO, 30)
       elseif TownCountDone(HIPPO) < 4 then
         call BuildUnit(2, HIPPO, 40)
@@ -1196,7 +1196,7 @@ elseif tier == 2 then
       call BuildUnit(4, FAERIE_DRAGON, 40)
       call BuildUnit(6, HIPPO_RIDER, 70)
       call BuildUnit(6, ARCHER, 50)
-      if (4 - TownCountDone(HIPPO_RIDER) > 0 then
+      if (4 - TownCountDone(HIPPO_RIDER)) > 0 then
         call BuildUnit((4 - TownCountDone(HIPPO_RIDER)), HIPPO, 30)
       elseif TownCountDone(HIPPO) < 4 then
         call BuildUnit(2, HIPPO, 40)
