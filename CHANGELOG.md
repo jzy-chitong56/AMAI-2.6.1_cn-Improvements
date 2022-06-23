@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
-## [2.6.1-cn] - 2022-06-15
+## [2.6.1-cn] - 2022-06-23
 ### Added
 - New chinese language translation, include Blizzard.eai [function Tribute]
 - Console add Page turning，adapted more than 12  AIPlayer and give more Strategy choose [Blizzard.eai]
@@ -32,7 +32,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Tweaks to town portal so more likely to be used for lower threats(Pixyy) (from [3.1.0])
 - Synchronization part function GetArmyHealthState change(from common.eai)
 - Synchronization function UpdateDebugPlayer and call UpdateDebugPlayer(from common.eai)
-- if no HumanPlayer in game play, the first Observer must choose language 
 - debug_player 1 → 0(from common.eai)
 - HUMAN UPGRADE UPG_SUN_BLADE UPGRADE need LUMBER_MILL,CASTLE,BLACKSMITH(on 1.32,UPG_SUN_BLADE no need UPGRADE)
 
@@ -48,6 +47,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
   - common.eai，PlayerNeutralExtra 14players→26players （self-adaption）
   - common.eai , sleep_multiplier , slm_start = 6 (war3_1.29 Automatic change to 9), slm_end = 10 (war3_1.29 Automatic change to 23), slm_end_mult = 3
   - GlobalSettings.txt , sleep_multiplier , slm_start = 6 , slm_end = 10 ,  slm_end_mult = 3
+  - Other 12 Player→24players（only on war3_1.29+, Automatic change）
 - Tweaked ranged units to avoid melee units only if damaged to 70% instead of 90% and reduced distance to trigger slightly. (Pixyy) (from [3.1.0]) 
 - Fixed an issue where healing totems are not cast correctly. (Pixyy) (from [3.1.0]) 
 - Front base distance range slightly increased again to help fix night elf troops getting stuck in base(now is 1100). (Pixyy) (from [3.1.0]) 
