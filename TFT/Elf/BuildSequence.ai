@@ -963,6 +963,8 @@ function init_strategy_Talon takes nothing returns nothing
 
 
 
+
+
 endfunction
 function build_sequence_Talon takes nothing returns nothing
 if tier == 3 then
@@ -976,6 +978,8 @@ if tier == 3 then
       call BuildUpgr(2, UPG_DRUID_TALON, 120)
       call BuildUnit(1, DEN_OF_WONDERS, 120)
       call BuildUpgr(1, UPG_MARK_TALON, 100)
+
+
 
 
 
@@ -1047,12 +1051,16 @@ elseif tier == 2 then
 
 
 
+
+
 else
 
       call SetBuildReact(32, 6, ARCHER, 0, HUNTRESS, (enemy_normal + enemy_mediumarmor - (enemy_air * 2) - enemy_piercing - enemy_siege), 4, 25, 38) 
       call BuildUnit(4, HUNTRESS, 52)
       call BuildUnit(1, TREE_AGES, 50)
       call BuildUnit(1, hero[1], 80)
+
+
 
 
 
