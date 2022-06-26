@@ -34,6 +34,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Synchronization function UpdateDebugPlayer and call UpdateDebugPlayer(from common.eai)
 - debug_player 1 → 0(from common.eai)
 - HUMAN UPGRADE UPG_SUN_BLADE UPGRADE need LUMBER_MILL,CASTLE,BLACKSMITH(on 1.32,UPG_SUN_BLADE no need UPGRADE)
+- Reduction Profiles can now be reused by AI players，now Profiles can't reused (if the Profiles Race same as AI Race)
+   - New Profiles RandomInt, some values are random
+   - Some Legendary players join the battle
 
 ### Fixed
 - Fix the chinese language encoding issues(from [3.0.1]) 

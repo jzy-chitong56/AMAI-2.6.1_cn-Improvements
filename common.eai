@@ -58,6 +58,7 @@ globals
     integer PLAYERPASSIVE = 15
     integer PLAYERAGGRESSIVE = 12
 
+
 	playercolor        PLAYER_COLOR_MAROONX             = null
     playercolor        PLAYER_COLOR_NAVYX               = null
     playercolor        PLAYER_COLOR_TURQUOISEX          = null
@@ -922,6 +923,7 @@ globals
     integer profile_length      = 0
     integer profile            = 0
     integer debug_profile = -1
+    integer array profileX
 
     string ai_name = "Computer"
     integer own_race = 0
@@ -2558,6 +2560,9 @@ endfunction
 // (AMAI) Profile system
 //==============================================================
 function set_profiles takes nothing returns nothing
+  local integer i = 0
+  local integer a = 1
+  local integer b = 1
 
 #INCLUDETABLE <$VER$\Profiles.txt> #EFR
     set profilename[#EVAL{%row-1}] = "%1"
@@ -2589,6 +2594,23 @@ function set_profiles takes nothing returns nothing
     set profile_length = #EVAL{%row-1}
 #ENDINCLUDE
 
+  if profileX[100] != 1 then
+    set profileX[100] = 1
+	set profileX[0] = GetRandomInt(0, profile_length)
+    loop
+      if profileX[i] + 1 > profile_length then
+	    set profileX[b] = profileX[0] - a
+		set a = a + 1
+	  else
+	    set profileX[b] = profileX[0] + b
+	  endif
+	  set i = i + 1
+	  set b = b + 1
+    exitwhen i > profile_length
+    endloop
+    set profileX[101] = 1
+  endif
+
 endfunction
 
 //============================================================================
@@ -2608,17 +2630,33 @@ function InitProfile takes nothing returns nothing
   call set_profiles()
 //  call getPreviousProfiles()
   
+  loop
+    exitwhen i == GetAiPlayer()
+    set i = i + 1
+  endloop
+
   if debug_profile != -1 then
     set profile = debug_profile
   else
-    loop
-      set profile = GetRandomInt(0, profile_length)
-      set i = i + 1 // Don't try and pick a profile beyond a sensible attempt limit
-      exitwhen (p_race[profile] == R_RANDOM or p_race[profile] == own_race) and (not IsProfileUsed(profile) or i > profile_length)
+  
+    // loop
+      // set profile = GetRandomInt(0, profile_length)
+      // set i = i + 1 // Don't try and pick a profile beyond a sensible attempt limit
+      // exitwhen (not IsProfileUsed(profile) and (p_race[profile] == R_RANDOM or p_race[profile] == own_race))or i > profile_length
+    // endloop
+	loop
+    exitwhen profileX[101] == 1
     endloop
+    set profile = i
+	if p_race[profile] != R_RANDOM or p_race[profile] != own_race then
+	  loop
+        set profile = GetRandomInt(27, profile_length)
+      exitwhen p_race[profile] == own_race
+      endloop
+	endif
   endif
 
-  call SetProfileUsed(profile)
+  //call SetProfileUsed(profile)
 
   if not fixedcomputername then
   	set ai_name = profilename[profile]
@@ -4380,7 +4418,6 @@ function GetUnitToBuy takes unit buy_place returns unit
   		if newdistance < distance then
 			set distance = newdistance
 			set buyingunit = u
-
 		endif
 	endif
       call GroupRemoveUnit(g, u)
@@ -7446,9 +7483,6 @@ endfunction
 
 //===========================================================================
 function InitGlobalSettings takes nothing returns nothing
-#INCLUDETABLE <$VER$\GlobalSettings.txt> #EFR
-  set %1 = %2
-#ENDINCLUDE
   if GetPlayerController(Player(14)) != MAP_CONTROL_CREEP and GetPlayerController(Player(14)) != MAP_CONTROL_NEUTRAL and GetPlayerController(Player(14)) != MAP_CONTROL_RESCUABLE then
 	set PLAYERPASSIVE = 27
 	set PLAYERAGGRESSIVE = 24
@@ -7467,6 +7501,9 @@ function InitGlobalSettings takes nothing returns nothing
 	set slm_start = 9
 	set slm_end = 23
   endif
+#INCLUDETABLE <$VER$\GlobalSettings.txt> #EFR
+  set %1 = %2
+#ENDINCLUDE
 endfunction
 
 //===========================================================================
