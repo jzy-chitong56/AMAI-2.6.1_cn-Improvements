@@ -2596,9 +2596,9 @@ function set_profiles takes nothing returns nothing
 
   if profileX[100] != 1 then
     set profileX[100] = 1
-	set profileX[0] = GetRandomInt(0, profile_length)
+	set profileX[0] = GetRandomInt(0, 26)
     loop
-      if profileX[i] + 1 > profile_length then
+      if profileX[i] + 1 > 26 then
 	    set profileX[b] = profileX[0] - a
 		set a = a + 1
 	  else
@@ -2606,9 +2606,10 @@ function set_profiles takes nothing returns nothing
 	  endif
 	  set i = i + 1
 	  set b = b + 1
-    exitwhen i > profile_length
+    exitwhen i > 26
     endloop
     set profileX[101] = 1
+    set profileX[102] = 0
   endif
 
 endfunction
@@ -2648,11 +2649,15 @@ function InitProfile takes nothing returns nothing
     exitwhen profileX[101] == 1
     endloop
     set profile = i
-	if p_race[profile] != R_RANDOM or p_race[profile] != own_race then
-	  loop
-        set profile = GetRandomInt(27, profile_length)
-      exitwhen p_race[profile] == own_race
-      endloop
+	if profileX[102] != 3 then
+	  set i = GetRandomInt(0, 4)
+	  if i == 4 then
+	    set profileX[102] = profileX[102] + 1
+	    loop
+          set profile = GetRandomInt(27, profile_length)
+        exitwhen p_race[profile] == own_race
+        endloop
+	  endif
 	endif
   endif
 
