@@ -361,7 +361,6 @@ else
         call BuildFront(1, ARCANE_TOWER, 45)
         call BuildUnit(4, RIFLEMAN, 43)
         call BuildUnit(1, KEEP, 55)
-        call BasicExpansionAM( GetMinesOwned() < 2 ,TOWN_HALL, 50)
 
 
 
