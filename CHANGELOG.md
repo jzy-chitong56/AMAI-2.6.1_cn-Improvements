@@ -5,13 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
-## [2.6.1-cn] - 2022-06-23
+## [2.6.1-cn] - 2022-07-2
 ### Added
 - New chinese language translation, include Blizzard.eai [function Tribute]
 - Console add Page turning，adapted more than 12  AIPlayer and give more Strategy choose [Blizzard.eai]
-- if no HumanPlayer in game play, the first Observer must choose language 
+- if no HumanPlayer on game, the first Observer must choose language 
 - translation add more sentence for all language(translate by google)
 - Add Undead UPGRADE UPG_SKEL_MASTERY
+- Undead strategy add GargGhouls.
 
 ### Changed
 - Computer skill level is now shown by default on AMAI players. (from [3.0.0]) 
@@ -21,9 +22,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
    - Night Elf increased use of warden and keeper.
    - Reduced use of mirror image skill.
 - Strategy tweaks and optimizations  (consult Pixyy)  (from [3.1.0])
-   - Improvements to human, orc, undead and night elf dynamic strategy
    - Removed non-useful units from harass attacks and fixed undead harassment group numbering.
-   - Hero priorities for building and resurrecting increased to ensure there are being built first.
+   - Improvements to human, orc, undead and night elf dynamic strategy adjustment.
+- Strategy additional Improvements
+   - Main city upgrade priorities for all tactics have been rebalanced around 50
+   - Increased the number of training units for Tier1 of all races
+   - Adjusted the night elf training Hippo eagle command to reduce the occupied population of the Hippo eagle that can only be brought to the air
+   - Night elf Talon now use FAERIE_DRAGON against the air , because AI won't become a bird , match the MOUNTAIN_GIANT at the same time
+   - Human Knight strategy now use COPTER , no STEAM_TANK , and Reduced GRYPHON quantity and priority
 - Very minor balance tweak so less expensive units food wise are needed before AI starts to consider [all] armor or weapon upgrades for them.  (from [3.1.1])
 - Fix Night Elf initial mining logic such that they build the starting buildings first before completely filling the gold mine. (Pixyy) (from [3.1.1])
 - Creep building detection range slightly increased(Pixyy) (from [3.1.0])
@@ -36,7 +42,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - HUMAN UPGRADE UPG_SUN_BLADE UPGRADE need LUMBER_MILL,CASTLE,BLACKSMITH(on 1.32,UPG_SUN_BLADE no need UPGRADE)
 - Reduction Profiles can now be reused by AI players，now Profiles can't reused (if the Profiles Race same as AI Race)
    - New Profiles RandomInt, some values are random
-   - AI can chance that the incarnation to Legendary players
 
 ### Fixed
 - Fix the chinese language encoding issues(from [3.0.1]) 
@@ -59,11 +64,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Fixed some not chinese language translation
 - Fixed the Dialog only show title at first
 - Fixed the Dialog cannot change language
-- Calibration the Player color 
+- Calibration the Player name color 
 - Add welcome message and opening tactical report Time of report (try to fix the problem of using default language for the first two reports)
+- Fixed some strategy no hero3 or misspelled two hero2
 
 ### Easter Egg
 - AI now can use power fountain (if map have power fountain)
+- AI Profiles can chance that the incarnation to Legendary real person players
 
 ## [2.6.1] - 2021-01-13
 - Fixed support for pre-1.32 versions.
