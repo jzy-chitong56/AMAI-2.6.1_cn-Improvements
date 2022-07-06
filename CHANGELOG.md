@@ -48,9 +48,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Improved support for 24 players. (from [3.0.0]) （no-native）-- Automatic according to version（Above or below the war3_1.29）
   - All 24 player colours are now supported by AMAI.(from [3.0.0]) 
   - Various messaging and attack targeting will now work with more than 12 players.(from [3.0.0]) 
-  - Profiles can now be reused by AI players. This is useful for > 12 players in a game as there is not always enough profiles to set unique profiles. (from [3.0.0]) 
-  - function IsProfileUsed used [HaveSavedInteger(com, PROFILE_USED, profile)]
-  - function InitProfile used [call SaveInteger(com, PROFILE_USED, profile, profile)]
   - Blizzard.eai，Blizzard1~4.j，BlizzardVAI.eai，DETECT_DEFEAT.eai，REVEAL_ENEMY.eai，UPDATE_STRENGTH.eai，MICRO_HERO.eai，common.eai，TOWER_RUSH.eai, ARMY_TRACK.eai, RETREAT_CONTROL.eai, RESET_WINDWALKER.eai, MILITIA_EXPAND.eai, MICRO_UNITS.eai, HARASS.eai, FOCUSFIRE_CONTROL.eai,   ALL 12players→24players , 13players→23players, 15players→27players()
   - common.eai，PlayerNeutralExtra 14players→26players （self-adaption）
   - common.eai , sleep_multiplier , slm_start = 6 (war3_1.29 Automatic change to 9), slm_end = 10 (war3_1.29 Automatic change to 23), slm_end_mult = 3
