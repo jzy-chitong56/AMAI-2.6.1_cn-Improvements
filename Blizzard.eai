@@ -80,6 +80,9 @@
     integer playermax = 12
     integer playercreep = 14
 
+    real Zoom = 0
+    trigger ZoomSetx = null
+
     dialog game_start_dialog = null
     trigger game_start_trigger = null
     button commander_mode = null
@@ -632,6 +635,29 @@ function Helpin takes nothing returns nothing
 #INCLUDETABLE <Languages\CommanderHelp.txt>
   call DisplayHelpToPlayer(p, "%1")
 #ENDINCLUDE
+endfunction
+
+//===========================================================================
+// Zoom
+//===========================================================================
+
+function ZoomSet takes nothing returns nothing
+  set Zoom = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
+  call SetCameraFieldForPlayer( GetTriggerPlayer(), CAMERA_FIELD_ZOFFSET, Zoom, 0 )
+  call DestroyTrigger( ZoomSetx )
+endfunction
+
+function InitZoom takes nothing returns nothing
+  local integer i = 0
+  
+  set ZoomSetx = CreateTrigger()
+  loop
+    exitwhen i >= playermax
+    call TriggerRegisterPlayerChatEvent( ZoomSetx, Player(i), "-zoom", false )
+    set i = i + 1
+  endloop
+  call TriggerAddAction( ZoomSetx, function ZoomSet )
+
 endfunction
 
 //===========================================================================
@@ -1774,10 +1800,9 @@ endfunction
 
 function LanguageDlg takes nothing returns nothing
   local integer host = GetFirstHuman()
-  
+
   // Need to pause computer ai and players
   call PauseAllUnitsBJ(true)
-  
   if language != "" or host == -1 then
     call LanguageDefault()
     return

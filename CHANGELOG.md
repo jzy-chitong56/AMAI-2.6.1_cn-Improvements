@@ -12,7 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - if no HumanPlayer on game, the first Observer must choose language 
 - translation add more sentence for all language(translate by google)
 - Add Undead UPGRADE UPG_SKEL_MASTERY
-- Undead strategy add GargGhouls.
+- Undead strategy add GargGhouls
+- Input "-zoomxxxx" to adjust the sight distance, and XXXX is a number, such as "-zoom1000" (learn w3chambers)
 
 ### Changed
 - Computer skill level is now shown by default on AMAI players. (from [3.0.0]) 
