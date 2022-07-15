@@ -16,6 +16,10 @@ Tested with strawbery perl 5.30 and Tk 804.034
 
 【这部分是 perl 的安装说明（可以安装`strawberry` ，也可以装`activestate`，建议装前者，百度就有），如果需要简化修改程序的难度，请额外安装图形化界面 Tk 】
 
+地图包下载（支持1.24+）-占用空间 25.9 M，迅雷网盘：
+链接：https://pan.xunlei.com/s/VN70v9geCKSXcoDF0lA3MQq2A1?pwd=i2bx#
+提取码：i2bx
+
 # Quick Build And Install
 - Use *makeTFT.bat* to create the scripts for the AI. 
 - Run *InstallTFTToMap.bat "C:\mymap.w3m"* to install the AI scripts to Warcraft 3 maps. 
