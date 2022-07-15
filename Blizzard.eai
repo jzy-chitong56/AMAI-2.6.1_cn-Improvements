@@ -81,6 +81,7 @@
     integer playercreep = 14
 
     real Zoom = 0
+    integer ZoomX = 0
     trigger ZoomSetx = null
 
     dialog game_start_dialog = null
@@ -644,13 +645,15 @@ endfunction
 function ZoomSet takes nothing returns nothing
   set Zoom = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
   call SetCameraFieldForPlayer( GetTriggerPlayer(), CAMERA_FIELD_ZOFFSET, Zoom, 0 )
-  call DestroyTrigger( ZoomSetx )
 endfunction
 
 function InitZoom takes nothing returns nothing
   local integer i = 0
   
-  set ZoomSetx = CreateTrigger()
+  if ZoomX == 0 then
+    set ZoomSetx = CreateTrigger()
+	set ZoomX = 1
+  endif
   loop
     exitwhen i >= playermax
     call TriggerRegisterPlayerChatEvent( ZoomSetx, Player(i), "-zoom", false )
