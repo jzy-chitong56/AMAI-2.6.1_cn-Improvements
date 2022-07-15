@@ -81,7 +81,6 @@
     integer playercreep = 14
 
     real Zoom = 0
-    integer ZoomX = 0
     trigger ZoomSetx = null
 
     dialog game_start_dialog = null
@@ -650,9 +649,8 @@ endfunction
 function InitZoom takes nothing returns nothing
   local integer i = 0
   
-  if ZoomX == 0 then
+  if ZoomSetx == null then
     set ZoomSetx = CreateTrigger()
-	set ZoomX = 1
   endif
   loop
     exitwhen i >= playermax
