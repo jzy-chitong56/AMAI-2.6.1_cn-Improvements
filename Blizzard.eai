@@ -80,7 +80,6 @@
     integer playermax = 12
     integer playercreep = 14
 
-    real Zoom = 0
     trigger ZoomSetx = null
 
     dialog game_start_dialog = null
@@ -642,6 +641,7 @@ endfunction
 //===========================================================================
 
 function ZoomSet takes nothing returns nothing
+  local real Zoom = 0
   set Zoom = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
   call SetCameraFieldForPlayer( GetTriggerPlayer(), CAMERA_FIELD_ZOFFSET, Zoom, 0 )
 endfunction
