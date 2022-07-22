@@ -650,8 +650,16 @@ function InitZoom takes nothing returns nothing
   local integer i = 0
   
   if ZoomSetx == null then
+    loop
+      exitwhen i >= playermax
+      if IsPlayerObserver(Player(i)) then
+        call SetCameraFieldForPlayer( Player(i), CAMERA_FIELD_ZOFFSET, 300, 0 )
+      endif	
+      set i = i + 1
+    endloop
     set ZoomSetx = CreateTrigger()
   endif
+  set i = 0
   loop
     exitwhen i >= playermax
     call TriggerRegisterPlayerChatEvent( ZoomSetx, Player(i), "-zoom", false )
