@@ -33,7 +33,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
    - Night elf Talon now use FAERIE_DRAGON against the air , because AI won't become a bird , match the MOUNTAIN_GIANT at the same time
    - Human Knight strategy now use COPTER , no STEAM_TANK , and Reduced GRYPHON quantity and priority
 - Very minor balance tweak so less expensive units food wise are needed before AI starts to consider [all] armor or weapon upgrades for them.  (from [3.1.1])
-- Fix Night Elf initial mining logic such that they build the starting buildings first before completely filling the gold mine. (Pixyy) (from [3.1.1])
 - Creep building detection range slightly increased(Pixyy) (from [3.1.0])
 - Front base distance range increased(Pixyy) (from [3.1.0])
 - Reduced number of mines needed before going into high upkeep(Pixyy) (from [3.1.0])
@@ -66,6 +65,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - Calibration the Player name color 
 - Add welcome message and opening tactical report Time of report (try to fix the problem of using default language for the first two reports)
 - Fixed some strategy no hero3 or misspelled two hero2
+- Fix Night Elf initial mining logic such that they build the starting buildings first before completely filling the gold mine. (Pixyy) (from [3.1.1])
+- Fix Night Elf and Undead 's race_tower_id(Settings.txt)
 
 ### Easter Egg
 - AI now can use power fountain (if map have power fountain)
