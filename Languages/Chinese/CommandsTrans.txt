@@ -58,7 +58,7 @@ Farms	人口建筑
 Towers	防御塔
 Current screen	当前地点
 Selected unit	选择的单位
-Towerrush (Orc only	塔RUSH（仅人/兽族可用）
+Towerrush (Orc only	TR最近的敌人（仅人/兽族可用）
 Enemy	指定玩家
 Start/Restart	开始/重新开始行动
 No Strategy Change	关闭动态战术
